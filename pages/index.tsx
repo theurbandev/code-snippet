@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.homeContainer}>
       <Head>
         <title>Pretty Screenshot</title>
         <link rel="icon" href="/favicon.ico" />
