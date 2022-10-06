@@ -21,3 +21,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* hot fix for hight issue with next.js pages */
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: calc(100%);
+}

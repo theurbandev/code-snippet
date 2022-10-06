@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Pretty Screenshot</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>{" "}
+      </Head>
       <Component {...pageProps} />
     </>
   );
