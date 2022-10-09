@@ -6,8 +6,8 @@ const Upload = () => {
     <>
       <Nav />
       <div className="flex flex-row">
-        <div className="basis-3/4 uploadCanvas">Upload Canvas</div>
-        <div className="basis-1/4 uploadToggleContainer"></div>
+        <div className={`basis-3/4 ${styles.uploadCanvas}`}>Upload Canvas</div>
+        <div className={`basis-1/4 ${styles.uploadToggleContainer}`}></div>
       </div>
     </>
   );

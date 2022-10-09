@@ -1,0 +1,11 @@
+/* TODO: Refactor all this sh** */
+
+.uploadToggleContainer {
+  background-color: rgba(23, 28, 35, 0.559);
+}
+
+.uploadCanvas {
+  background-color: rgba(1, 1, 1, 0.559);
+  margin: 100px;
+  margin-top: 50px;
+}
