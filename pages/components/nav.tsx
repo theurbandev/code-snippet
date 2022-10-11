@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import styles from "../../styles/Nav.module.css";
 
 const navigation = [
   { name: "Pretty Screenshot", href: "/", current: true },
@@ -13,7 +14,7 @@ function classNames(...classes: string[]) {
 
 export const Nav = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className={`${styles.navContainer} bg-gray-800`}>
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

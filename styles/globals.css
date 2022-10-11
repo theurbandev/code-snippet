@@ -11,6 +11,8 @@ body {
   background-color: rgb(13, 17, 23);
   color: rgb(255, 255, 255);
   text-align: center;
+  min-height: 100vh !important;
+  min-height: -webkit-fill-available;
 }
 
 a {
@@ -20,13 +22,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-/* hot fix for hight issue with next.js pages */
-html,
-body,
-body > div:first-child,
-div#__next,
-div#__next > div {
-  height: calc(100%);
 }
