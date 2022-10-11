@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { Nav } from "./components/nav";
+import Footer from "./components/footer";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
           </a>
         </section>
       </div>
+      <Footer />
     </>
   );
 };
