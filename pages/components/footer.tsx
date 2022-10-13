@@ -8,7 +8,7 @@ const Footer = () => {
       }}
     >
       <a target="_blank" href="https://github.com/theurbandev">
-        <h6>Made with love by: theurbandev</h6>
+        <h6>Made with love by : theurbandev</h6>
       </a>
     </div>
   );
