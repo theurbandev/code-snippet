@@ -1,4 +1,5 @@
 const UploadSection = () => {
+
   const upload = () => {
     alert("Upload Clicked");
   };
@@ -10,6 +11,7 @@ const UploadSection = () => {
       </button>
     </div>
   );
+  
 };
 
 export default UploadSection;
