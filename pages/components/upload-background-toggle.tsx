@@ -24,7 +24,7 @@ export default function BackgroundToggle() {
       <div className="mx-auto w-full max-w-md">
         <RadioGroup value={selected} onChange={setSelected}>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-3">
             {plans.map((plan) => (
               <RadioGroup.Option
                 key={plan.name}
@@ -53,14 +53,11 @@ export default function BackgroundToggle() {
                             {plan.name}
                           </RadioGroup.Label> */}
                           <RadioGroup.Description
-                            as="span"
                             className={`inline ${
                               checked ? "text-sky-100" : "text-white-500"
                             }`}
                           >
-                            <span>
-                              <img src={"../" + plan.image + ".jpg"} alt="" />
-                            </span>
+                            <img src={"../" + plan.image + ".jpg"} alt="" />
                           </RadioGroup.Description>
                         </div>
                       </div>
