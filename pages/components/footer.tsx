@@ -8,8 +8,11 @@ const Footer = () => {
         marginBottom: "50px",
       }}
     >
-    <h6>Made with <span style={{"fontSize" : "12px"}}>❤</span> - 
-    <a href="https://github.com/theurbandev" target={"_blank"}>theurbandev</a> </h6>
+      <h6>
+        <a href="https://github.com/theurbandev" target={"_blank"}>
+          theurbandev
+        </a>{" "}
+      </h6>
     </div>
   );
 };
