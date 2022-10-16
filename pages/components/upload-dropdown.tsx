@@ -10,7 +10,7 @@ export default function Example() {
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             Options
             <ChevronDownIcon
-              className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
+              className="ml-2 -mr-1 h-5 w-5 text-black-200 hover:text-black-100"
               aria-hidden="true"
             />
           </Menu.Button>
@@ -30,7 +30,7 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                      active ? "bg-slate-600 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     {active ? (
@@ -39,34 +39,9 @@ export default function Example() {
                         aria-hidden="true"
                       />
                     ) : (
-                      <EditInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
+                      <EditInactiveIcon className="mr-2 h-5 w-5" />
                     )}
-                    Edit
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-violet-500 text-white" : "text-gray-900"
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <DuplicateActiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <DuplicateInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    Duplicate
+                    Share
                   </button>
                 )}
               </Menu.Item>
@@ -76,7 +51,7 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                      active ? "bg-slate-600 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     {active ? (
@@ -98,7 +73,7 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                      active ? "bg-slate-600 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     {active ? (
@@ -122,17 +97,17 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                      active ? "bg-slate-600 text-white" : "text-gray-900"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     {active ? (
                       <DeleteActiveIcon
-                        className="mr-2 h-5 w-5 text-violet-400"
+                        className="mr-2 h-5 w-5 text-black-400"
                         aria-hidden="true"
                       />
                     ) : (
                       <DeleteInactiveIcon
-                        className="mr-2 h-5 w-5 text-violet-400"
+                        className="mr-2 h-5 w-5 text-black-400"
                         aria-hidden="true"
                       />
                     )}
@@ -161,7 +136,7 @@ function EditInactiveIcon(
       <path
         d="M4 13V16H7L16 7L13 4L4 13Z"
         fill="#EDE9FE"
-        stroke="#A78BFA"
+        stroke="#5987ab"
         strokeWidth="2"
       />
     </svg>
@@ -201,13 +176,13 @@ function DuplicateInactiveIcon(
       <path
         d="M4 4H12V12H4V4Z"
         fill="#EDE9FE"
-        stroke="#A78BFA"
+        stroke="#5987ab"
         strokeWidth="2"
       />
       <path
         d="M8 8H16V16H8V8Z"
         fill="#EDE9FE"
-        stroke="#A78BFA"
+        stroke="#5987ab"
         strokeWidth="2"
       />
     </svg>
@@ -256,7 +231,7 @@ function ArchiveInactiveIcon(
         width="10"
         height="8"
         fill="#EDE9FE"
-        stroke="#A78BFA"
+        stroke="#5987ab"
         strokeWidth="2"
       />
       <rect
@@ -265,10 +240,10 @@ function ArchiveInactiveIcon(
         width="12"
         height="4"
         fill="#EDE9FE"
-        stroke="#A78BFA"
+        stroke="#5987ab"
         strokeWidth="2"
       />
-      <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
+      <path d="M8 12H12" stroke="#5987ab" strokeWidth="2" />
     </svg>
   );
 }
@@ -301,7 +276,7 @@ function ArchiveActiveIcon(
         stroke="#C4B5FD"
         strokeWidth="2"
       />
-      <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
+      <path d="M8 12H12" stroke="#5987ab" strokeWidth="2" />
     </svg>
   );
 }
@@ -316,9 +291,9 @@ function MoveInactiveIcon(
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M10 4H16V10" stroke="#A78BFA" strokeWidth="2" />
-      <path d="M16 4L8 12" stroke="#A78BFA" strokeWidth="2" />
-      <path d="M8 6H4V16H14V12" stroke="#A78BFA" strokeWidth="2" />
+      <path d="M10 4H16V10" stroke="#5987ab" strokeWidth="2" />
+      <path d="M16 4L8 12" stroke="#5987ab" strokeWidth="2" />
+      <path d="M8 6H4V16H14V12" stroke="#5987ab" strokeWidth="2" />
     </svg>
   );
 }
@@ -356,11 +331,11 @@ function DeleteInactiveIcon(
         width="10"
         height="10"
         fill="#EDE9FE"
-        stroke="#A78BFA"
+        stroke="#5987ab"
         strokeWidth="2"
       />
-      <path d="M3 6H17" stroke="#A78BFA" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#A78BFA" strokeWidth="2" />
+      <path d="M3 6H17" stroke="#5987ab" strokeWidth="2" />
+      <path d="M8 6V4H12V6" stroke="#5987ab" strokeWidth="2" />
     </svg>
   );
 }
