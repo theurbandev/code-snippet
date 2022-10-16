@@ -1,13 +1,22 @@
 .container {
   height: Calc(100vh - 115px);
+  padding: 5rem 7rem;
 }
 
 .uploadToggleContainer {
   background-color: rgba(23, 28, 35, 0.559);
-  margin: 100px;
 }
 
 .uploadCanvas {
-  background-color: rgba(1, 1, 1, 0.559);
-  margin: 100px 0px 100px 100px;
+  /* background-color: rgba(1, 1, 1, 0.559); */
+}
+
+.uploadLabel{
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.uploadDefaultInput{
+  display: none;
 }

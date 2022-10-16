@@ -5,6 +5,7 @@ const Footer = () => {
         color: "white",
         display: "block",
         textAlign: "center",
+        marginBottom: "50px",
       }}
     >
     <h6>Made with <span style={{"fontSize" : "12px"}}>❤</span> - 

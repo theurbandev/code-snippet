@@ -9,7 +9,7 @@ const Upload = () => {
     <>
       <Nav />
       <div className={`${styles.container} flex flex-row`}>
-        <div className={`basis-3/4 ${styles.uploadCanvas}`}>
+        <div className={`basis-3/4 bg-gray-800 ${styles.uploadCanvas}`}>
           <UploadSection />
         </div>
         <div className={`basis-1/4 ${styles.uploadToggleContainer}`}>
