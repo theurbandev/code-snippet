@@ -20,3 +20,9 @@
 .uploadDefaultInput{
   display: none;
 }
+
+.photoUploadedContainer{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}

@@ -44,14 +44,6 @@ export default function BackgroundToggle() {
                     <div className="flex w-full items-center justify-between">
                       <div className="flex items-center">
                         <div className="text-sm">
-                          {/* <RadioGroup.Label
-                            as="p"
-                            className={`font-medium text-base pb-4  ${
-                              checked ? "text-white" : "text-gray-900"
-                            }`}
-                          >
-                            {plan.name}
-                          </RadioGroup.Label> */}
                           <RadioGroup.Description
                             className={`inline ${
                               checked ? "text-sky-100" : "text-white-500"
@@ -61,11 +53,6 @@ export default function BackgroundToggle() {
                           </RadioGroup.Description>
                         </div>
                       </div>
-                      {/* {checked && (
-                        <div className="shrink-0 text-white">
-                          <CheckIcon className="h-6 w-6" />
-                        </div>
-                      )} */}
                     </div>
                   </>
                 )}
