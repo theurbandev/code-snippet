@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 
-const plans = [
+const backgroundsList = [
   {
     name: "Startup",
     image: "gradient1",
@@ -17,7 +17,7 @@ const plans = [
 ];
 
 export default function BackgroundToggle() {
-  const [selected, setSelected] = useState(plans[0]);
+  const [selected, setSelected] = useState(backgroundsList[0]);
 
   return (
     <div className="w-full px-4 py-8">
@@ -25,7 +25,7 @@ export default function BackgroundToggle() {
         <RadioGroup value={selected} onChange={setSelected}>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
           <div className="flex justify-center gap-3">
-            {plans.map((plan) => (
+            {backgroundsList.map((plan) => (
               <RadioGroup.Option
                 key={plan.name}
                 value={plan}

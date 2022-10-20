@@ -12,6 +12,7 @@ const UploadSection = () => {
 
     grabUploadedPhoto(img);
   };
+
   return (
     <>
       <Example />
