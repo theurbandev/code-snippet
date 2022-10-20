@@ -1,7 +1,7 @@
 import { Nav } from "./components/nav";
 import Footer from "./components/footer";
-import ToggleSection from "./components/toggles-section";
-import UploadSection from "./components/upload-section";
+import ToggleSection from "./components/upload/toggles-section";
+import UploadSection from "./components/upload/upload-section";
 import styles from "../styles/upload.module.css";
 
 const Upload = () => {

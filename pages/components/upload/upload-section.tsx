@@ -1,6 +1,6 @@
 import styles from "../../styles/upload.module.css";
 import { useState } from "react";
-import Example from "./upload-dropdown";
+import Example from "../upload-dropdown";
 
 const UploadSection = () => {
   const [photoUploaded, grabUploadedPhoto] = useState();
