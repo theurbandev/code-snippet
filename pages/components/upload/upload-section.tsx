@@ -1,22 +1,27 @@
 import styles from "../../../styles/upload.module.css";
 import { useState } from "react";
 import Example from "./upload-dropdown";
+import BackgroundToggle from "./upload-background-toggle";
 
-const UploadSection = () => {
-  const [photoUploaded, grabUploadedPhoto] = useState();
+const UploadSection = (props: any) => {
+  const [photoUploaded, grabUploadedPhoto] = useState("");
 
-  const upload = (event) => {
-    console.log("Upload button clicked");
-
+  const upload = (event: any) => {
+    console.log("photo being uploaded...");
     const img = URL.createObjectURL(event.target.files[0]);
-
     grabUploadedPhoto(img);
   };
 
   return (
     <>
       <Example />
-      <div className="grid content-center" style={{ height: "100%" }}>
+      <div
+        className="grid content-center backgroundContainer"
+        style={{
+          height: "100%",
+          backgroundImage: `${props.img}`,
+        }}
+      >
         {photoUploaded ? (
           <></>
         ) : (
@@ -35,7 +40,7 @@ const UploadSection = () => {
           </button>
         )}
         {photoUploaded ? (
-          <div className={styles.photoUploadedContainer}>
+          <div className={styles.photoUploader}>
             {<img src={photoUploaded} />}
           </div>
         ) : (

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
+import UploadSection from "./upload-section";
 
 const backgroundsList = [
   {
@@ -19,10 +20,19 @@ const backgroundsList = [
 export default function BackgroundToggle() {
   const [selected, setSelected] = useState(backgroundsList[0]);
 
+  const updateBackground = () => {
+    console.log("working..");
+    return <UploadSection img={selected} />;
+  };
+
   return (
     <div className="w-full px-4 py-8">
       <div className="mx-auto w-full max-w-md">
-        <RadioGroup value={selected} onChange={setSelected}>
+        <RadioGroup
+          value={selected}
+          onChange={setSelected}
+          onClick={updateBackground}
+        >
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
           <div className="flex justify-center gap-3">
             {backgroundsList.map((plan) => (
@@ -62,20 +72,5 @@ export default function BackgroundToggle() {
         </RadioGroup>
       </div>
     </div>
-  );
-}
-
-function CheckIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" {...props}>
-      <circle cx={12} cy={12} r={12} fill="#fff" opacity="0.2" />
-      <path
-        d="M7 13l3 3 7-7"
-        stroke="#fff"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }
