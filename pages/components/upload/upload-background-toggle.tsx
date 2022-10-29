@@ -22,7 +22,6 @@ export default function BackgroundToggle() {
 
   const updateBackground = () => {
     console.log("working..");
-    return <UploadSection img={selected} />;
   };
 
   return (
