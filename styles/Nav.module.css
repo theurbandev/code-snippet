@@ -1,4 +1,5 @@
 .navContainer {
   position: relative;
-  border-bottom: solid 4px #5987ab;
+  background-color: #5F6A63;
+  border-bottom: solid 4px #ACB2B2;
 }

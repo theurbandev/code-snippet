@@ -2,10 +2,12 @@ const Footer = () => {
   return (
     <div
       style={{
-        color: "white",
+        color: "#ACB2B2",
         display: "block",
         textAlign: "center",
         marginBottom: "50px",
+        fontSize: "12px",
+        textTransform: "uppercase",
       }}
     >
       <h6>

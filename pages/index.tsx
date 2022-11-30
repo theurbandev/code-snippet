@@ -9,7 +9,12 @@ const Home: NextPage = () => {
       <Nav />
       <div className={`${styles.homeContainer} grid content-center`}>
         <section>
-          <p className="font-mono mt-3 text-2xl tracking-tight">
+          <p
+            className="font-mono mt-3 text-3xl tracking-tight"
+            style={{
+              color: "#ACB2B2",
+            }}
+          >
             Make your screenshots less ugly.
           </p>
           <a href="/upload">

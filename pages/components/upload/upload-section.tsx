@@ -1,7 +1,6 @@
 import styles from "../../../styles/upload.module.css";
 import { useState } from "react";
-import Example from "./upload-dropdown";
-import BackgroundToggle from "./upload-background-toggle";
+import UploadDropdown from "./upload-dropdown";
 
 const UploadSection = (props: any) => {
   const [photoUploaded, UpdateUploadedState] = useState(Boolean);
@@ -22,7 +21,8 @@ const UploadSection = (props: any) => {
 
   return (
     <>
-      <Example />
+      <UploadDropdown />
+      <div></div>
       <div
         className="grid content-center backgroundContainer"
         style={{
@@ -37,7 +37,7 @@ const UploadSection = (props: any) => {
         ) : (
           <button onChange={upload}>
             <label className={styles.uploadLabel}>
-              <h1 className="shadow-md rounded-lg bg-gray-900 hover:bg-cyan-700 p-5">
+              <h1 className="transition duration-0 hover:duration-150 mt-5 px-7 py-3 shadow-md font-mono uppercase rounded-lg bg-gray-800">
                 Upload your ugly screenshot.
               </h1>
               <input

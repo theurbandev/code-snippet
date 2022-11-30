@@ -2,7 +2,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment, SVGProps, useEffect, useRef, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-export default function Example() {
+export default function UploadDropdown() {
   return (
     <div className="fixed m-5 text-right">
       <Menu as="div" className="relative inline-block text-right">
