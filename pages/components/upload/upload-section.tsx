@@ -48,7 +48,7 @@ const UploadSection = (props: any) => {
         ) : (
           <button onChange={upload}>
             <label className={styles.uploadLabel}>
-              <h1 className="transition duration-0 hover:duration-150 mt-5 px-7 py-3 shadow-md font-mono uppercase rounded-lg bg-gray-800">
+              <h1 className="transition duration-0 hover:duration-150 mt-5 px-7 py-3 shadow-md uppercase rounded-lg bg-gray-800">
                 Upload your ugly screenshot.
               </h1>
               <input
