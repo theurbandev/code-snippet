@@ -4,12 +4,20 @@ import Example from "./upload-dropdown";
 import BackgroundToggle from "./upload-background-toggle";
 
 const UploadSection = (props: any) => {
-  const [photoUploaded, grabUploadedPhoto] = useState("");
+  const [photoUploaded, UpdateUploadedState] = useState(Boolean);
+  const [currentPhoto, UpdateUploadedPhoto] = useState("");
 
   const upload = (event: any) => {
     console.log("photo being uploaded...");
     const img = URL.createObjectURL(event.target.files[0]);
-    grabUploadedPhoto(img);
+    UpdateUploadedState(true);
+    UpdateUploadedPhoto(img);
+  };
+
+  const clearUploadedPhoto = () => {
+    console.log("removing uploaded photo..");
+    UpdateUploadedPhoto("");
+    UpdateUploadedState(false);
   };
 
   return (
@@ -23,7 +31,9 @@ const UploadSection = (props: any) => {
         }}
       >
         {photoUploaded ? (
-          <></>
+          <div className={styles.photoUploader}>
+            {<img src={currentPhoto} />}
+          </div>
         ) : (
           <button onChange={upload}>
             <label className={styles.uploadLabel}>
@@ -38,13 +48,6 @@ const UploadSection = (props: any) => {
               />
             </label>
           </button>
-        )}
-        {photoUploaded ? (
-          <div className={styles.photoUploader}>
-            {<img src={photoUploaded} />}
-          </div>
-        ) : (
-          <></>
         )}
       </div>
     </>
