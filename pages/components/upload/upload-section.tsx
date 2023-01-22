@@ -51,8 +51,8 @@ const UploadSection = (props: any) => {
       >
         {photoUploaded ? (
           <div className={styles.photoUploader}>
-            {<img src={backgroundPhoto} />}
-            {<img src={currentPhoto} />}
+            {<img src={backgroundPhoto} className={styles.centerImg} />}
+            {<img src={currentPhoto} className={styles.centerImg} />}
           </div>
         ) : (
           <button onChange={upload}>

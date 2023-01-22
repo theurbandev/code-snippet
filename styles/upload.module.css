@@ -1,3 +1,9 @@
+.centerImg{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+}
+
 .container {
   height: Calc(100vh - 115px);
   padding: 2rem
