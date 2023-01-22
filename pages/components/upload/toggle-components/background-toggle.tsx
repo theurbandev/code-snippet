@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 
 const backgroundsList = [
@@ -19,20 +19,16 @@ const backgroundsList = [
 export default function UploadBackgroundToggle() {
   const [selected, setSelected] = useState(backgroundsList[0]);
 
-  const updateBackground = () => {
-    console.log("working..");
-  };
+  useEffect(() => {
+    window.sessionStorage.setItem("background-image", selected.image);
+  });
 
   return (
     <>
       <h1 className="text-xl  uppercase">Background</h1>
       <div className="px-4 py-4">
         <div className="max-w-lg">
-          <RadioGroup
-            value={selected}
-            onChange={setSelected}
-            onClick={updateBackground}
-          >
+          <RadioGroup value={selected} onChange={setSelected}>
             <div className="flex justify-center gap-3">
               {backgroundsList.map((background) => (
                 <RadioGroup.Option

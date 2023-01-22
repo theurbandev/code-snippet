@@ -1,10 +1,11 @@
 import styles from "../../../styles/upload.module.css";
 import UploadDropdown from "./upload-components/upload-dropdown";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const UploadSection = (props: any) => {
-  const [photoUploaded, UpdateUploadedState] = useState(Boolean);
+  const [photoUploaded, UpdateUploadedState] = useState(false);
   const [currentPhoto, UpdateUploadedPhoto] = useState("");
+  const [backgroundPhoto, BackgroundPhotoSet] = useState("");
 
   const upload = (event: any) => {
     console.log("photo being uploaded...");
@@ -18,6 +19,14 @@ const UploadSection = (props: any) => {
     UpdateUploadedPhoto("");
     UpdateUploadedState(false);
   };
+
+  useEffect(() => {
+    const sessionItems = new Map();
+    const backgroundImg = sessionStorage.getItem("background-image");
+    sessionItems.set("backgroundImage", `../${backgroundImg}.jpg`);
+
+    BackgroundPhotoSet(sessionItems.get("backgroundImage"));
+  });
 
   return (
     <>
@@ -42,6 +51,7 @@ const UploadSection = (props: any) => {
       >
         {photoUploaded ? (
           <div className={styles.photoUploader}>
+            {<img src={backgroundPhoto} />}
             {<img src={currentPhoto} />}
           </div>
         ) : (
