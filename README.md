@@ -1,5 +1,5 @@
 ## Pretty Screenshot makes your screenshots less trash.
-
+![Screenshot 2023-01-21 at 11 03 59 PM](https://user-images.githubusercontent.com/22361998/213900297-34fe4bae-1e8a-4daa-ba93-3f23d3133c64.png)
 
 
 
