@@ -21,3 +21,5 @@ export const buttons = () => {
     </div>
   );
 };
+
+export default buttons;

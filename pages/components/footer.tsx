@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div
@@ -11,9 +13,9 @@ const Footer = () => {
       }}
     >
       <h6>
-        <a href="https://github.com/theurbandev" target={"_blank"}>
+        <Link href="https://github.com/theurbandev" target={"_blank"}>
           theurbandev
-        </a>{" "}
+        </Link>{" "}
       </h6>
     </div>
   );
