@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { Nav } from "./components/nav";
 import Footer from "./components/footer";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -17,11 +18,11 @@ const Home: NextPage = () => {
           >
             Make your screenshots less ugly.
           </p>
-          <a href="/upload">
+          <Link href="/upload">
             <button className="transition duration-0 hover:duration-150 mt-5 px-7 py-3 shadow-md font-mono uppercase rounded-lg bg-gray-800">
               Get Started
             </button>
-          </a>
+          </Link>
         </section>
       </div>
       <Footer />

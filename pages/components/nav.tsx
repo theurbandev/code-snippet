@@ -85,3 +85,5 @@ export const Nav = () => {
     </Disclosure>
   );
 };
+
+export default Nav;
