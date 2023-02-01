@@ -15,6 +15,7 @@
 
 .uploadCanvas {
   border-radius: 5px 0px 0px 5px;
+  position: relative;
 }
 
 .uploadLabel{
@@ -35,4 +36,24 @@
 .photoUploader img{
   max-width: 732px;
   max-height: 651px;
+}
+
+
+/* NEW */
+.codeContainer{
+  width: 40vw;
+}
+
+.codeContainer *{
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.codeContainer .windowControls{
+  height: 20px;
+}
+
+.windowControls{
+  background-color: black;
 }

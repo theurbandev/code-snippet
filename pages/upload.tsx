@@ -9,10 +9,10 @@ const Upload = () => {
     <>
       <Nav />
       <div className={`${styles.container} flex flex-col`}>
-        <div className={`basis-3/4 ${styles.uploadCanvas}`}>
+        <div className={`basis-10/12 ${styles.uploadCanvas}`}>
           <UploadSection />
         </div>
-        <div className={`basis-1/4 ${styles.uploadToggleContainer}`}>
+        <div className={`basis-2/12 ${styles.uploadToggleContainer}`}>
           <ToggleSection />
         </div>
       </div>

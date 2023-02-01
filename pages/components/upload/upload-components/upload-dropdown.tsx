@@ -65,7 +65,7 @@ export default function UploadDropdown() {
                         aria-hidden="true"
                       />
                     )}
-                    Download
+                    Export
                   </button>
                 )}
               </Menu.Item>
