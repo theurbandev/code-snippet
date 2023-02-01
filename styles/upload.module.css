@@ -40,20 +40,21 @@
 
 
 /* NEW */
-.codeContainer{
-  width: 40vw;
+[contenteditable] {
+  outline: 0px solid transparent;
 }
 
-.codeContainer *{
+.codeContainer{
+  background-color: black;
+  width: 40vw;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.codeContainer .windowControls{
-  height: 20px;
-}
-
-.windowControls{
-  background-color: black;
+.codeEditor{
+  text-align: left;
+  padding-top: 20px;
 }
