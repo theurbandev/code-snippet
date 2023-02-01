@@ -2,7 +2,7 @@ import { Nav } from "./components/nav/nav";
 import { NextPage } from "next";
 import ToggleSection from "./components/toggles/toggles-section";
 import UploadSection from "./components/editor/editor-section";
-import styles from "../styles/editor.module.css";
+import styles from "./components/editor/styles/editor.module.css";
 
 const Home: NextPage = () => {
   return (
