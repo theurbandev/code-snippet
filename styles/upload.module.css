@@ -42,7 +42,8 @@
 /* NEW */
 .codeContainer{
   background-color: black;
-  width: 40vw;
+  width: 40rem;
+  height: 10rem;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
