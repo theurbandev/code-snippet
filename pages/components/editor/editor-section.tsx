@@ -92,7 +92,7 @@ const UploadSection = (props: any) => {
           </g>
         </svg>
         <div className={styles.codeEditor} contentEditable="true">
-          console.log("Hello World")
+          {'console.log("Hello World")'}
         </div>
       </div>
     </>
