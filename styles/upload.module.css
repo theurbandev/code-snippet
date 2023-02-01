@@ -40,10 +40,6 @@
 
 
 /* NEW */
-[contenteditable] {
-  outline: 0px solid transparent;
-}
-
 .codeContainer{
   background-color: black;
   width: 40vw;
