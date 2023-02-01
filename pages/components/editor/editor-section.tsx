@@ -1,5 +1,5 @@
-import styles from "../../../styles/upload.module.css";
-import UploadDropdown from "./upload-components/upload-dropdown";
+import styles from "../../../styles/editor.module.css";
+import UploadDropdown from "../nav/dropdown-menu";
 import { useEffect, useState } from "react";
 
 const UploadSection = (props: any) => {

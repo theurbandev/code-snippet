@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Pretty Screenshot</title>
+        <title>Code Snippet</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
