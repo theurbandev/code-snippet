@@ -8,15 +8,15 @@ const Upload = () => {
   return (
     <>
       <Nav />
-      <div className={`${styles.container} flex flex-row`}>
-        <div className={`basis-4/5 bg-gray-800 ${styles.uploadCanvas}`}>
+      <div className={`${styles.container} flex flex-col`}>
+        <div className={`basis-3/4 ${styles.uploadCanvas}`}>
           <UploadSection />
         </div>
-        <div className={`basis-2/5 ${styles.uploadToggleContainer}`}>
+        <div className={`basis-1/4 ${styles.uploadToggleContainer}`}>
           <ToggleSection />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

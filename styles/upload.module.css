@@ -1,21 +1,19 @@
 .centerImg{
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 
 .container {
-  height: Calc(100vh - 115px);
-  padding: 2rem
+  height: Calc(100vh);
 }
 
 .uploadToggleContainer {
-  background-color: #00000024;
+  background-color: #5F6A63;
   border-radius: 0px 5px 5px 0px;
 }
 
 .uploadCanvas {
-  background-color: #ACB2B2;
   border-radius: 5px 0px 0px 5px;
 }
 
