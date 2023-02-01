@@ -1,4 +1,5 @@
 import styles from "./styles/editor.module.css";
+import { ResizableBox } from "react-resizable";
 import { useEffect, useState } from "react";
 
 const UploadSection = (props: any) => {
