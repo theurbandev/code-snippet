@@ -9,8 +9,12 @@
 }
 
 .uploadToggleContainer {
-  background-color: #5F6A63;
-  border-radius: 0px 5px 5px 0px;
+  /* background-color: #5f6a63de; */
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 41px 40px 0px 0px;
+  border: solid 2px black;
+  border-bottom: 0px;
 }
 
 .uploadCanvas {
@@ -42,17 +46,16 @@
 /* NEW */
 .codeContainer{
   background-color: black;
-  max-width: 60rem;
-  max-height: 30rem;
+  max-width: 50rem;
   width: 40rem;
-  height: 10rem;
+  height: 25rem;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   padding: 20px;
   border-radius: 10px;
   overflow: auto;
-  resize: both;
+  resize: horizontal;
 }
 
 .codeEditor{

@@ -29,34 +29,6 @@ const UploadSection = (props: any) => {
 
   return (
     <>
-      {/* <div
-        className="grid content-center backgroundContainer"
-        style={{
-          height: "100%",
-          backgroundImage: `${props.img}`,
-        }}
-      >
-        {photoUploaded ? (
-          <div className={styles.photoUploader}>
-            {<img src={backgroundPhoto} className={styles.centerImg} />}
-            {<img src={currentPhoto} className={styles.centerImg} />}
-          </div>
-        ) : (
-          <button onChange={upload}>
-            <label className={styles.uploadLabel}>
-              <h1 className="transition duration-0 hover:duration-150 mt-5 px-7 py-3 shadow-md uppercase rounded-lg bg-gray-800">
-                Upload your ugly screenshot.
-              </h1>
-              <input
-                className={styles.uploadDefaultInput}
-                type="file"
-                name="uglyImage"
-                accept="image/*"
-              />
-            </label>
-          </button>
-        )}
-      </div> */}
       <div className={styles.codeContainer}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
