@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #EBEBED;
+  background-color: #D1D1D1;
   color: rgb(255, 255, 255);
   text-align: center;
   min-height: 100vh !important;
@@ -22,4 +22,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
 }

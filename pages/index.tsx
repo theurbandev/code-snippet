@@ -1,31 +1,22 @@
-import type { NextPage } from "next";
-import { Nav } from "./components/nav";
-import Footer from "./components/footer";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
+import { Nav } from "./components/nav/nav";
+import { NextPage } from "next";
+import ToggleSection from "./components/toggles/toggles-section";
+import UploadSection from "./components/editor/editor-section";
+import styles from "./components/editor/styles/editor.module.css";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Nav />
-      <div className={`${styles.homeContainer} grid content-center`}>
-        <section>
-          <p
-            className="font-mono mt-3 text-3xl tracking-tight"
-            style={{
-              color: "#ACB2B2",
-            }}
-          >
-            Make your screenshots less ugly.
-          </p>
-          <Link href="/upload">
-            <button className="transition duration-0 hover:duration-150 mt-5 px-7 py-3 shadow-md font-mono uppercase rounded-lg bg-gray-800">
-              Get Started
-            </button>
-          </Link>
-        </section>
+      {/* <Nav /> */}
+      <div className={`${styles.container} flex flex-col`}>
+        <div className={`basis-10/12 ${styles.uploadCanvas}`}>
+          <UploadSection />
+        </div>
+        <div className={`basis-2/12 ${styles.uploadToggleContainer}`}>
+          <ToggleSection />
+        </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
