@@ -7,7 +7,7 @@ import styles from "./components/editor/styles/editor.module.css";
 const Home: NextPage = () => {
   return (
     <>
-      {/* <Nav /> */}
+      <Nav />
       <div className={`${styles.container} flex flex-col`}>
         <div className={`basis-10/12 ${styles.uploadCanvas}`}>
           <UploadSection />
