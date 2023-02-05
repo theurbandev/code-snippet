@@ -1,5 +1,10 @@
 {
   "toggleNames": ["Theme", "Language", "Background"],
+  "toggleOptions": {
+    "themes": ["black"],
+    "backgrounds": [],
+    "languages": []
+  },
   "toggleIcons": [
     {
       "icon1": "path1",
