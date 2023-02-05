@@ -1,0 +1,10 @@
+{
+  "toggleNames": ["Theme", "Language", "Background"],
+  "toggleIcons": [
+    {
+      "icon1": "path1",
+      "icon2": "path2",
+      "icon3": "path3"
+    }
+  ]
+}
