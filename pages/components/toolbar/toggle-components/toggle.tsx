@@ -7,7 +7,7 @@ const Toggle = (props: any) => {
     <>
       {toggleData.toggleNames.map((data: string) => {
         return (
-          <div id="toggleContainer">
+          <div id="toggleContainer" key={data}>
             <h3 id="toggleName">{data}</h3>
           </div>
         );
