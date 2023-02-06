@@ -1,58 +1,39 @@
 let toggleData = require("./toggleData.json");
+import { stringify } from "querystring";
 import styles from "./styles/toolbar.module.css";
 
+const t = (key: string) => {
+	// let entries = Object.entries(toggleData.toggleOptions);
+	let entries: string = toggleData.toggleOptions;
+	// let data = entries.map(([key, val]) => {
+	// 	console.log(val);
+	// 	return val;
+	// });
+
+	let data = entries;
+	console.log(key[0]);
+	// return data;
+};
+
 const Toggle = (props: any) => {
-  const { toggleName } = props;
-
-  return (
-    <>
-      {toggleData.toggleNames.map((toggleNames: string) => {
-        return (
-          <div id="toggleContainer">
-            <h3 id="toggleName" key={toggleNames}>
-              {toggleNames}
-            </h3>
-            <>
-              <div className={`${styles.dropdown}`}>
-                <input type="checkbox" id="dropdown" />
-
-                <label
-                  className={`${styles.dropdown__face}`}
-                  htmlFor="dropdown"
-                >
-                  <div className={`${styles.t2}`}>{toggleNames}</div>
-                  <div className={`${styles.dropdown__arrow}`}></div>
-                </label>
-
-                <ul className={`${styles.dropdown__items}`}>
-                  {toggleData.toggleOptions.themes.map((toggleThemes: any) => {
-                    <li className={`${styles.t2}`}>{toggleThemes}</li>;
-                  })}
-                </ul>
-              </div>
-
-              <svg className={`${styles.svg}`}>
-                <filter id="goo">
-                  <feGaussianBlur
-                    in="SourceGraphic"
-                    stdDeviation="10"
-                    result="blur"
-                  />
-                  <feColorMatrix
-                    in="blur"
-                    type="matrix"
-                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-                    result="goo"
-                  />
-                  <feBlend in="SourceGraphic" in2="goo" />
-                </filter>
-              </svg>
-            </>
-          </div>
-        );
-      })}
-    </>
-  );
+	const { toggleName } = props;
+	let entries = Object.entries(toggleData.toggleOptions);
+	return (
+		<>
+			{entries.map(([key, val]) => {
+				return (
+					<div id="toggleContainer">
+						<h3 id="toggleName" key={key}>
+							{key}
+						</h3>
+						<select>
+							<option>{t(val)}</option>))
+						</select>
+					</div>
+				);
+			})}
+		</>
+	);
 };
 
 export default Toggle;
