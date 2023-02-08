@@ -17,14 +17,16 @@ const Toolbar = () => {
 						>
 							<h3
 								id="toggleName"
-								className={`text-2xl font-semibold text-left ml-10 ${styles.numLinesToggle}`}
+								className={`text-3xl font-semibold text-left ml-10 ${styles.numLinesToggle}`}
 								key={key}
 							>
 								{key}
 							</h3>
 							<div className={`flex`}>
 								<div className={`${styles.sectionIcon}`}></div>
-								<select className={`${styles.dropdownOption}`}>
+								<select
+									className={`${styles.dropdownOption} transition ease-in-out delay-150 hover:-translate-y-1 hover:translate-y-6 hover:translate-x-25 hover:scale-110 hover:bg-amber-400 hover:cursor-pointer hover:shadow-lg duration-300`}
+								>
 									{val.map((element) => {
 										return (
 											<option
@@ -44,7 +46,7 @@ const Toolbar = () => {
 				<div>
 					<h3
 						id="toggleName"
-						className={`text-2xl font-semibold text-left ${styles.numLinesToggle}`}
+						className={`text-3xl font-semibold text-left ${styles.numLinesToggle}`}
 					>
 						Numbered Lines
 					</h3>
