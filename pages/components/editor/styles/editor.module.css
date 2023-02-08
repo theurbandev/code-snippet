@@ -11,9 +11,10 @@
 .uploadToggleContainer {
   /* background-color: #5f6a63de; */
   width: 60%;
+  max-width: 9000px;
   margin: 0 auto;
-  border-radius: 41px 40px 0px 0px;
-  border: solid 2px black;
+  border-radius: 10px 10px 0px 0px;
+  border: solid 1px black;
   border-bottom: 0px;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .photoUploader img{
-  max-width: 732px;
+  max-width: 932px;
   max-height: 651px;
 }
 
@@ -46,7 +47,7 @@
 /* NEW */
 .codeContainer{
   background-color: black;
-  max-width: 50rem;
+  max-width: 80rem;
   width: 40rem;
   height: 25rem;
   margin: auto;

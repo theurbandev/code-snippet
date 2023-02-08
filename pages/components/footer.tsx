@@ -1,24 +1,8 @@
 import Link from "next/link";
+import UploadDropdown from "./nav/dropdown-menu";
 
 const Footer = () => {
-  return (
-    <div
-      style={{
-        color: "#ACB2B2",
-        display: "block",
-        textAlign: "center",
-        marginBottom: "50px",
-        fontSize: "12px",
-        textTransform: "uppercase",
-      }}
-    >
-      <h6>
-        <Link href="https://github.com/theurbandev" target={"_blank"}>
-          theurbandev
-        </Link>{" "}
-      </h6>
-    </div>
-  );
+  return <UploadDropdown />;
 };
 
 export default Footer;
