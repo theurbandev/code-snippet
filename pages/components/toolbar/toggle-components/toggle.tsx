@@ -16,17 +16,21 @@ const Toggle = () => {
 					>
 						<h3
 							id="toggleName"
-							className={`text-lg font-semibold text-left ml-6`}
+							className={`text-lg font-semibold text-left ml-6 ${styles.numLinesToggle}`}
 							key={key}
 						>
 							{key}
 						</h3>
 						<div className={`flex`}>
-							<div className={`${styles.sectionIcon}`}>ICON</div>
+							<div className={`${styles.sectionIcon}`}></div>
 							<select className={`${styles.dropdownOption}`}>
 								{val.map((element) => {
 									return (
-										<option key={element} selected>
+										<option
+											className={`${styles.dropdownSelect}`}
+											key={element}
+											selected
+										>
 											{element}
 										</option>
 									);
@@ -39,7 +43,7 @@ const Toggle = () => {
 			<div>
 				<h3
 					id="toggleName"
-					className={`text-lg font-semibold text-left`}
+					className={`text-lg font-semibold text-left ${styles.numLinesToggle}`}
 				>
 					Numbered Lines
 				</h3>

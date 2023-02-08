@@ -1,0 +1,32 @@
+.toolbarContainer{
+    width: 59%;
+    margin: 0 auto;
+    border-radius: 10px 10px 0px 0px;
+    /* border: solid 1px black; */
+    border-bottom: 0px;
+}
+.dropdownOption{
+    color: rgba(26, 26, 26, 0.78);
+    background-color: transparent;
+    border: solid 1px black;
+    height: 38px;
+    padding: 0 7px 0 40px;
+    text-align: right;
+}
+.dropdownSelect{
+    padding: 50px;
+}
+.sectionIcon{
+    width: 28px;
+    background-color: black;
+    line-height: 38px;
+}
+.numLinesToggle{
+    color: hsl(0deg 1% 28% / 78%);
+}
+.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
