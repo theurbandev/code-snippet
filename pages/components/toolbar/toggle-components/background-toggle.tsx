@@ -28,7 +28,7 @@ export default function UploadBackgroundToggle() {
     window.sessionStorage.setItem("background-image", selected.image);
   });
 
-  return <Toggle toggleName="Theme"></Toggle>;
+  return <Toggle />;
 
   // return (
   //   <>
