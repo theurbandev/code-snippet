@@ -1,11 +1,11 @@
 import UploadBackgroundToggle from "./toggle-components/background-toggle";
 
-const ToggleSection = () => {
+const Toolbar = () => {
   return (
     <section className="flex justify-center flex-wrap flex-row py-7 px-7">
-      {/* <UploadBackgroundToggle /> */}
+      <UploadBackgroundToggle />
     </section>
   );
 };
 
-export default ToggleSection;
+export default Toolbar;

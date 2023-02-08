@@ -1,7 +1,7 @@
 import styles from "./styles/editor.module.css";
 import { useEffect, useState } from "react";
 
-const UploadSection = (props: any) => {
+const CodeEditor = (props: any) => {
   const [photoUploaded, UpdateUploadedState] = useState(false);
   const [currentPhoto, UpdateUploadedPhoto] = useState("");
   const [backgroundPhoto, BackgroundPhotoSet] = useState("");
@@ -71,4 +71,4 @@ const UploadSection = (props: any) => {
   );
 };
 
-export default UploadSection;
+export default CodeEditor;
