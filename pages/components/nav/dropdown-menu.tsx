@@ -8,12 +8,8 @@ export default function UploadDropdown() {
 		<div className="">
 			<Menu as="div" className="relative inline-block text-right">
 				<div>
-					<Menu.Button className="inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2.5 text-lg font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+					<Menu.Button className="inline-flex w-56 justify-center rounded-md bg-black bg-opacity-20 px-4 py-3.5 text-lg font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
 						Export
-						<ChevronDownIcon
-							className="ml-20 w-5 h-6 text-black-200 hover:text-black-100"
-							aria-hidden="true"
-						/>
 					</Menu.Button>
 				</div>
 				<Transition
