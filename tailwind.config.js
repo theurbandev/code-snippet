@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 /** @type {import('tailwindcss').Config} */
@@ -11,6 +12,9 @@ module.exports = withMT({
 	],
 	theme: {
 		extend: {
+			colors: {
+				amber: colors.amber,
+			},
 			fontFamily: {
 				sans: ["font-mono"],
 			},

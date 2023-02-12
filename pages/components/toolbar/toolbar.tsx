@@ -1,10 +1,17 @@
-let toggleData = require("./toolbarData.json");
+let toolbarData = require("./toolbarData.json");
 import styles from "./styles/toolbar.module.css";
 import { Button, Switch } from "@material-tailwind/react";
 
+const randomColor = () => {
+	const randomNumber: number = Math.floor(
+		Math.random() * toolbarData.tailwindColors.length
+	);
+	return toolbarData.tailwindColors[randomNumber];
+};
+
 const Toolbar = () => {
 	let entries: [string, string[]][] = Object.entries(
-		toggleData.toggleOptions
+		toolbarData.toggleOptions
 	);
 	return (
 		<section className="flex justify-center flex-wrap flex-row py-14 px-8">
@@ -18,7 +25,7 @@ const Toolbar = () => {
 						>
 							<h3
 								id="toggleName"
-								className={`text-3xl font-semibold text-left ml-10 ${styles.numLinesToggle}`}
+								className={`text-4xl font-semibold text-left ml-10 mb-3 ${styles.numLinesToggle}`}
 								key={key}
 							>
 								{key}
@@ -26,7 +33,7 @@ const Toolbar = () => {
 							<div className={`flex`}>
 								<div className={`${styles.sectionIcon}`}></div>
 								<select
-									className={`${styles.dropdownOption} border-solid border-2 border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:translate-y-6 hover:translate-x-25 hover:scale-110 hover:bg-amber-400 hover:cursor-pointer hover:shadow-lg duration-300`}
+									className={`${styles.dropdownOption} border-solid border-2 border-black transition ease-in-out delay-150 hover:translate-x-5 hover:scale-80 hover:bg-gray-500 hover:cursor-pointer hover:shadow-lg duration-300`}
 								>
 									{val.map((element) => {
 										return (
@@ -47,7 +54,7 @@ const Toolbar = () => {
 				<div>
 					<h3
 						id="toggleName"
-						className={`text-3xl font-semibold text-left ${styles.numLinesToggle}`}
+						className={`text-4xl font-semibold text-left mb-3 ${styles.numLinesToggle}`}
 					>
 						Numbered Lines
 					</h3>

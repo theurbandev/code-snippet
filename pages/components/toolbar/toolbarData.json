@@ -12,5 +12,6 @@
 			"icon2": "path2",
 			"icon3": "path3"
 		}
-	]
+	],
+	"tailwindColors": ["bg-gray-300", "bg-gray-300"]
 }
