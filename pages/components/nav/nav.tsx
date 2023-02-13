@@ -12,12 +12,11 @@ function classNames(...classes: string[]) {
 
 export const Nav = () => {
   return (
-    <div className={`${styles.navContainer} flex flex-row-reverse my-5 mx-10`}>
-      <UploadDropdown />
-      {/* <button className="rounded-md bg-black bg-opacity-10 text-lg font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 w-40 h-12 mx-10">
-        undo
-      </button> */}
-    </div>
+		<div
+			className={`${styles.navContainer} flex flex-row-reverse my-5 mx-10`}
+		>
+			<UploadDropdown />
+		</div>
   );
 };
 

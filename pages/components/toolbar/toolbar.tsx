@@ -1,6 +1,5 @@
-let toolbarData = require("./toolbarData.json");
 import styles from "./styles/toolbar.module.css";
-import { Button, Switch } from "@material-tailwind/react";
+let toolbarData = require("./toolbarData.json");
 
 const randomColor = () => {
 	const randomNumber: number = Math.floor(
@@ -37,11 +36,7 @@ const Toolbar = () => {
 								>
 									{val.map((element) => {
 										return (
-											<option
-												className={`${styles.dropdownSelect}`}
-												key={element}
-												selected
-											>
+											<option id={key} key={element}>
 												{element}
 											</option>
 										);
