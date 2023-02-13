@@ -1,23 +1,36 @@
 import styles from "./styles/editor.module.css";
+import textTransformer from "../helpers/textTransformer";
 import { themesData } from "../shared/data/themes";
 import { useEffect, useState } from "react";
 
 export const CodeEditor = () => {
-	const [theme, setTheme] = useState("");
+	const [theme, setSelectedTheme] = useState("");
+	const [editorText, setEditorText] = useState("");
+
+	const initTextTransformation = () => {
+		for (let i = 0; i < themesData.length; i++) {
+			if (themesData[i].name == theme) {
+				// start text transform process here?
+				textTransformer(themesData[i].highlights, editorText);
+			}
+		}
+	};
 
 	useEffect(() => {
-		const currTheme = (
-			document.getElementById("Themes") as HTMLInputElement
-		).value;
-		setTheme(currTheme);
-		getThemeData(currTheme);
-	}, []);
+		const currTheme = (document.getElementById("Themes") as HTMLInputElement).value;
+		const currEditorText = (document.getElementById("editor") as HTMLDivElement).innerHTML;
+
+		setEditorText(currEditorText);
+		setSelectedTheme(currTheme);
+		initTextTransformation();
+	}, [initTextTransformation]);
 
 	return (
 		<>
 			<div className={styles.codeContainer}>
 				{editorTopBar()}
 				<div
+					id="editor"
 					className={styles.codeEditor}
 					contentEditable="true"
 					style={{ fontSize: "15px" }}
@@ -29,14 +42,6 @@ export const CodeEditor = () => {
 	);
 };
 
-const getThemeData = (theme: string) => {
-	for (let i = 0; i < themesData.length; i++) {
-		if (themesData[i].name == theme) {
-			console.log(themesData[i].highlights);
-			// start text transform process here?
-		}
-	}
-};
 
 const editorTopBar = () => {
 	return (
