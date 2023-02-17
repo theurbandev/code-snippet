@@ -1,25 +1,37 @@
 .toolbarContainer{
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 10px 10px 0px 0px;
     border-bottom: 0px;
 }
 .dropdownOption{
-    color: rgba(26, 26, 26, 0.78);
+    color: white;
     background-color: transparent;
-    height: 38px;
-    padding: 0 7px 0 40px;
-    text-align: right;
+    height: 3.4rem;
+    padding: 0rem 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: solid 3px #0000005e;
+    border-left: 0;
 }
 .dropdownSelect{
     padding: 50px;
 }
 .sectionIcon{
-    width: 28px;
-    background-color: black;
-    line-height: 38px;
+    width: 50px;
+    height: 52px;
+    background-color: hsl(204deg 20% 23% / 51%);
+    line-height: 42px;
+    box-shadow: 0px 20px 0px 0px #3c6545db;
 }
 .numLinesToggle{
     color: hsl(0deg 1% 28% / 78%);
+    font-weight: 600;
+    font-size: 6.25rem;
+    font-family: sans-serif;
+    letter-spacing: 8px;
+    line-height: 5rem;
 }
 .footer{
     position: absolute;
