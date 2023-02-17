@@ -1,5 +1,5 @@
 import styles from "./styles/toolbar.module.css";
-let toolbarData = require("./toolbarData.json");
+let { toolbarData } = require("./toolbarData.json");
 
 const randomColor = () => {
 	const randomNumber: number = Math.floor(Math.random() * toolbarData.tailwindColors.length);

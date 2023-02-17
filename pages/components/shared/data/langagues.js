@@ -1,4 +1,4 @@
-export default langues = [
+const langues = [
 	{
 		name: "Auto",
 		mode: "auto",
@@ -423,3 +423,5 @@ export default langues = [
 		highlight: true,
 	},
 ];
+
+export default langues;
