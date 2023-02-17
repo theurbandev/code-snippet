@@ -1,6 +1,6 @@
 import styles from "./styles/editor.module.css";
 import textTransformer from "../helpers/textTransformer";
-import { themesData } from "../shared/data/themes";
+import themesData from "../shared/data/themes";
 import { useEffect, useState } from "react";
 
 export const CodeEditor = () => {
