@@ -11,7 +11,7 @@ export const CodeEditor = () => {
 		for (let i = 0; i < themesData.length; i++) {
 			if (themesData[i].name == theme) {
 				// start text transform process here?
-				textTransformer(themesData[i].highlights, editorText);
+				// textTransformer(themesData[i].highlights, editorText);
 			}
 		}
 	};

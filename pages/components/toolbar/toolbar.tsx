@@ -38,7 +38,7 @@ const Toolbar = () => {
 						</div>
 					);
 				})}
-				<div>
+				{/* <div>
 					<h3 id='toggleName' className={`text-4xl font-semibold text-left mb-3 ${styles.numLinesToggle}`}>
 						Numbered Lines
 					</h3>
@@ -49,7 +49,10 @@ const Toolbar = () => {
 						border-solid border-2 border-black peer-checked:after:translate-x-full peer-checked:after:border-black after:absolute after:top-[2px] after:left-[2px] after:bg-black after:h-10 after:w-10 after:transition-all'
 						></div>
 					</label>
-				</div>
+				</div> */}
+               {/* "Font Size": [15],
+		"Background": ["dim1", "whiteyellow", "gradient2", "none"],
+		"Language": ["JavaScript", "Go", "PHP"] */}
 			</div>
 		</section>
 	);
