@@ -42,6 +42,14 @@ export const CodeEditor = () => {
 	);
 };
 
+const getThemeData = (theme: string) => {
+	for (let i = 0; i < themesData.length; i++) {
+		if (themesData[i].name == theme) {
+			console.log(themesData[i].highlights);
+			// start text transform process here?
+		}
+	}
+};
 
 const editorTopBar = () => {
 	return (
