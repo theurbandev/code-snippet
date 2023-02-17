@@ -1,4 +1,4 @@
-export const themesData = [
+export default themesData = [
 	{
 		id: "3024-night",
 		name: "3024 Night",

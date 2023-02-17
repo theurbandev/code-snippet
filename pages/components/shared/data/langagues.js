@@ -1,4 +1,4 @@
-export const langues = [
+export default langues = [
 	{
 		name: "Auto",
 		mode: "auto",
