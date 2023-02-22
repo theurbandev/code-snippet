@@ -1,10 +1,6 @@
 {
-	"toggleNames": ["Theme", "Language", "Background", "Something"],
 	"toggleOptions": {
-		"Font Size": [15],
-		"Themes": ["Jet Black", "white", "cream"],
-		"Background": ["dim1", "whiteyellow", "gradient2", "none"],
-		"Language": ["JavaScript", "Go", "PHP"]
+        "Themes": ["3024 Night", "A11y Dark", "Blackboard", "Base 16 (Dark)"]	
 	},
 	"toggleIcons": [
 		{
