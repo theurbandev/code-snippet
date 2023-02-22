@@ -2,7 +2,7 @@ import styles from "./styles/editor.module.css";
 import textTransformer from "../helpers/textTransformer";
 import { useEffect, useState } from "react";
 
-let { themesData } = require("../shared/data/themes.js");
+const themesData = require("../../../shared/data/themes");
 
 export const CodeEditor = () => {
 	const [theme, setSelectedTheme] = useState("");

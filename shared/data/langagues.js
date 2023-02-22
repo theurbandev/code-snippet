@@ -1,4 +1,4 @@
-const langues = [
+const languages = [
 	{
 		name: "Auto",
 		mode: "auto",
@@ -424,4 +424,4 @@ const langues = [
 	},
 ];
 
-export default langues;
+export default languages;

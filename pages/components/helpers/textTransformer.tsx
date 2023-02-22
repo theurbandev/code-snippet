@@ -16,23 +16,13 @@ interface themeDataObj {
 	meta: string;
 }
 
-class transform {
-	backgroundColor;
-
-	constructor(themeData: themeDataObj, text: string) {
-		this.backgroundColor = themeData.background;
-	}
-
-	highlightText() {}
-}
-
 const textTransformer = (themeData: themeDataObj, editorText: string) => {
 	console.log(themeData);
 	console.log(editorText);
 
-	const output = new transform(themeData, editorText);
-	console.log(output);
-	return output;
+	// const output = new transform(themeData, editorText);
+	// console.log(output);
+	// return output;
 };
 
 export default textTransformer;
