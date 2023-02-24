@@ -17,11 +17,7 @@ interface themeDataObj {
 }
 
 const textTransformer = (themeData: themeDataObj, editorText: string) => {
-	console.log(themeData);
-	console.log(editorText);
-
 	// const output = new transform(themeData, editorText);
-	// console.log(output);
 	// return output;
 };
 

@@ -1,8 +1,10 @@
 import styles from "./styles/editor.module.css";
 import textTransformer from "../helpers/textTransformer";
 import { useEffect, useState } from "react";
+import themesData from "../../../shared/data/themes";
 
-const themesData = require("../../../shared/data/themes");
+console.log(themesData);
+console.log(themesData[0].highlights);
 
 export const CodeEditor = () => {
 	const [theme, setSelectedTheme] = useState("");
@@ -12,7 +14,9 @@ export const CodeEditor = () => {
 		for (let i = 0; i < themesData.length; i++) {
 			if (themesData[i].name == theme) {
 				// start text transform process here?
-				// textTransformer(themesData[i].highlights, editorText);
+				textTransformer(themesData[i].highlights, editorText);
+			} else {
+				console.log("No theme data found..");
 			}
 		}
 	};
@@ -31,9 +35,9 @@ export const CodeEditor = () => {
 			<div className={styles.codeContainer}>
 				{editorTopBar()}
 				<div
-					id="editor"
+					id='editor'
 					className={styles.codeEditor}
-					contentEditable="true"
+					contentEditable='true'
 					style={{ fontSize: "15px" }}
 				>
 					{'console.log("Hello World")'}
