@@ -9,7 +9,7 @@ export default function UploadDropdown() {
 			<Menu as='div' className='relative inline-block text-right'>
 				<div>
 					<Menu.Button
-						className='inline-flex w-72 h-[60px] justify-center rounded-md bg-black bg-opacity-20 px-5 py-5 text-2xl text-white font-bold hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+						className='inline-flex w-72 h-[60px] justify-center  rounded-md bg-black bg-opacity-20 px-5 py-5 text-2xl text-white font-bold hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
 						style={{
 							fontFamily: "sans-serif",
 							letterSpacing: "3px",
