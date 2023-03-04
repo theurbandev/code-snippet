@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import ToolBar from "./components/toolbar/toolbar";
 import CodeEditor from "./components/editor/editor";
 import styles from "./components/toolbar/styles/toolbar.module.css";
-import Footer from "./components/footer";
+import Footer from "./components/footer/footer";
 
 const Home: NextPage = () => {
 	return (

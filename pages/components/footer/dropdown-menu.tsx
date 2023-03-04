@@ -8,8 +8,15 @@ export default function UploadDropdown() {
 		<div className=''>
 			<Menu as='div' className='relative inline-block text-right'>
 				<div>
-					<Menu.Button className='inline-flex w-72 h-[60px] justify-center rounded-md bg-black bg-opacity-20 px-5 py-5 text-2xl text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'>
-						Export
+					<Menu.Button
+						className='inline-flex w-72 h-[60px] justify-center rounded-md bg-black bg-opacity-20 px-5 py-5 text-2xl text-white font-bold hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+						style={{
+							fontFamily: "sans-serif",
+							letterSpacing: "3px",
+							borderBottom: "solid 5px #3c6545db",
+						}}
+					>
+						EXPORT
 					</Menu.Button>
 				</div>
 				<Transition
@@ -118,148 +125,111 @@ export default function UploadDropdown() {
 	);
 }
 
-function EditInactiveIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg {...props} viewBox="0 0 20 20" fill="none">
-      <path
-        d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="#EDE9FE"
-        stroke="#5F6A63"
-        strokeWidth="2"
-      />
-    </svg>
-  );
+function EditInactiveIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+	return (
+		<svg {...props} viewBox='0 0 20 20' fill='none'>
+			<path
+				d='M4 13V16H7L16 7L13 4L4 13Z'
+				fill='#EDE9FE'
+				stroke='#5F6A63'
+				strokeWidth='2'
+			/>
+		</svg>
+	);
 }
 
-function EditActiveIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg {...props} viewBox="0 0 20 20" fill="none">
-      <path
-        d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="white"
-        stroke="black"
-        strokeWidth="2"
-      />
-    </svg>
-  );
+function EditActiveIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+	return (
+		<svg {...props} viewBox='0 0 20 20' fill='none'>
+			<path d='M4 13V16H7L16 7L13 4L4 13Z' fill='white' stroke='black' strokeWidth='2' />
+		</svg>
+	);
 }
 
-function ArchiveInactiveIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="8"
-        width="10"
-        height="8"
-        fill="#EDE9FE"
-        stroke="#5F6A63"
-        strokeWidth="2"
-      />
-      <rect
-        x="4"
-        y="4"
-        width="12"
-        height="4"
-        fill="#EDE9FE"
-        stroke="#5F6A63"
-        strokeWidth="2"
-      />
-      <path d="M8 12H12" stroke="#5F6A63" strokeWidth="2" />
-    </svg>
-  );
+function ArchiveInactiveIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+	return (
+		<svg {...props} viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			<rect
+				x='5'
+				y='8'
+				width='10'
+				height='8'
+				fill='#EDE9FE'
+				stroke='#5F6A63'
+				strokeWidth='2'
+			/>
+			<rect
+				x='4'
+				y='4'
+				width='12'
+				height='4'
+				fill='#EDE9FE'
+				stroke='#5F6A63'
+				strokeWidth='2'
+			/>
+			<path d='M8 12H12' stroke='#5F6A63' strokeWidth='2' />
+		</svg>
+	);
 }
 
-function ArchiveActiveIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="8"
-        width="10"
-        height="8"
-        fill="white"
-        stroke="#5F6A63"
-        strokeWidth="2"
-      />
-      <rect
-        x="4"
-        y="4"
-        width="12"
-        height="4"
-        fill="white"
-        stroke="#5F6A63"
-        strokeWidth="2"
-      />
-      <path d="M8 12H12" stroke="#5987ab" strokeWidth="2" />
-    </svg>
-  );
+function ArchiveActiveIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+	return (
+		<svg {...props} viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			<rect
+				x='5'
+				y='8'
+				width='10'
+				height='8'
+				fill='white'
+				stroke='#5F6A63'
+				strokeWidth='2'
+			/>
+			<rect
+				x='4'
+				y='4'
+				width='12'
+				height='4'
+				fill='white'
+				stroke='#5F6A63'
+				strokeWidth='2'
+			/>
+			<path d='M8 12H12' stroke='#5987ab' strokeWidth='2' />
+		</svg>
+	);
 }
 
-function DeleteInactiveIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="6"
-        width="10"
-        height="10"
-        fill="#EDE9FE"
-        stroke="#5F6A63"
-        strokeWidth="2"
-      />
-      <path d="M3 6H17" stroke="#5F6A63" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#5F6A63" strokeWidth="2" />
-    </svg>
-  );
+function DeleteInactiveIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+	return (
+		<svg {...props} viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			<rect
+				x='5'
+				y='6'
+				width='10'
+				height='10'
+				fill='#EDE9FE'
+				stroke='#5F6A63'
+				strokeWidth='2'
+			/>
+			<path d='M3 6H17' stroke='#5F6A63' strokeWidth='2' />
+			<path d='M8 6V4H12V6' stroke='#5F6A63' strokeWidth='2' />
+		</svg>
+	);
 }
 
-function DeleteActiveIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="6"
-        width="10"
-        height="10"
-        fill="white"
-        stroke="#5F6A63"
-        strokeWidth="2"
-      />
-      <path d="M3 6H17" stroke="#5F6A63" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#5F6A63" strokeWidth="2" />
-    </svg>
-  );
+function DeleteActiveIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+	return (
+		<svg {...props} viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			<rect
+				x='5'
+				y='6'
+				width='10'
+				height='10'
+				fill='white'
+				stroke='#5F6A63'
+				strokeWidth='2'
+			/>
+			<path d='M3 6H17' stroke='#5F6A63' strokeWidth='2' />
+			<path d='M8 6V4H12V6' stroke='#5F6A63' strokeWidth='2' />
+		</svg>
+	);
 }

@@ -3,19 +3,30 @@
 import themesData from "../../../shared/data/themes";
 
 const mapper = (text) => {
-	const textSeparatorRegex = /[.]/;
-	const map = new Map();
+	// responsible for categorizing the type of keywords in typed in editor
+	const highlightMap = new Map();
+	const highlightTypes = [
+		{ variable: ["const", "let"] },
+		{ variable2: ["var"] },
+		{ attribute: [] },
+		{ definition: [] },
+		{ keyword: ["console", "log"] },
+		{ operator: ["+", "-", "/", "*"] },
+		{ property: [] },
+		{ number: ["number", "int", "float"] },
+		{ string: ["string"] },
+		{ comment: ["//"] },
+		{ meta: ["."] },
+	];
 
-	// console.log(text.split(textSeparatorRegex));
-	// ke.split("");
-	// console.log(ke);
+	highlightTypes.forEach((type) => {
+		for (const [key, value] of Object.entries(type)) {
+			highlightMap.set(key, value);
+		}
+	});
+	console.log(highlightMap);
 
-	const newText = [];
-	// console.log(text);
-	// for (const word of text) {
-	// 	map.set("thekey", word);
-	// }
-	// console.log(map.entries());
+	// parse input text and start mapping words to "types"
 };
 
 const textTransformer = () => {
