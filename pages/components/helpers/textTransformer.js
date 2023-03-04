@@ -2,8 +2,8 @@
 
 import themesData from "../../../shared/data/themes";
 
-const mapper = (text) => {
-	// responsible for categorizing the type of keywords in typed in editor
+const mapper = (editorText) => {
+	// map highlight types to highlightMap
 	const highlightMap = new Map();
 	const highlightTypes = [
 		{ variable: ["const", "let"] },
@@ -24,9 +24,17 @@ const mapper = (text) => {
 			highlightMap.set(key, value);
 		}
 	});
-	console.log(highlightMap);
 
-	// parse input text and start mapping words to "types"
+	// parse parameter value(editorText) and map to highlightMap
+	const parsedText = editorText.split(" ");
+	console.log(parsedText);
+	parsedText.forEach((word) => {
+		highlightMap.forEach((value, key) => {
+			if (value.includes(word)) {
+				console.log(`${key} :`, word);
+			}
+		});
+	});
 };
 
 const textTransformer = () => {
@@ -41,7 +49,6 @@ const textTransformer = () => {
 	}
 
 	mapper(currEditorText);
-	console.log(currEditorText, themeHighlightData);
 };
 
 export default textTransformer;
