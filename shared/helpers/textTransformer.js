@@ -1,6 +1,4 @@
-// this file should be responsible for getting the text from editor.tsx and letting it know how to present the text based on the text classification.
-
-import themesData from "../../../shared/data/themes";
+import themesData from "../data/themes";
 
 const mapper = (editorText) => {
 	// map highlight types to highlightMap

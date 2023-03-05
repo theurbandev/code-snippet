@@ -1,15 +1,14 @@
 import styles from "./styles/editor.module.css";
-import themesData from "../../../shared/data/themes";
-import textTransformer from "../helpers/textTransformer.js";
-import { useEffect, useState } from "react";
 import editorTopBar from "../editor-top-bar/editor-top-bar";
+import textTransformer from "../../../shared/helpers/textTransformer.js";
+import { useEffect, useState } from "react";
 
 export const CodeEditor = () => {
 	const [editorText, setEditorText] = useState('console.log("Hello World")');
 
 	useEffect(() => {
 		textTransformer();
-	});
+	}, []);
 
 	return (
 		<>
