@@ -1,5 +1,5 @@
 import styles from "./styles/nav.module.css";
-import UploadDropdown from "./dropdown-menu";
+import UploadDropdown from "../footer/dropdown-menu";
 
 const navigation = [
   { name: "Pretty Screenshot", href: "/", current: true },

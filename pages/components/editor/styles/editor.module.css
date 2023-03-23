@@ -1,8 +1,8 @@
 .codeContainer{
   background-color: black;
   max-width: 80rem;
-  width: 40rem;
-  height: 25rem;
+  width: 55rem;
+  height: 33rem;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -20,6 +20,7 @@
 .react-resizable {
   position: relative;
 }
+
 .react-resizable-handle {
   position: absolute;
   width: 20px;

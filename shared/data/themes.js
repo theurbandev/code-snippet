@@ -1,4 +1,4 @@
-export const themesData = [
+const themesData = [
 	{
 		id: "3024-night",
 		name: "3024 Night",
@@ -585,3 +585,5 @@ export const themesData = [
 		},
 	},
 ];
+
+export default themesData;

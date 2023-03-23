@@ -1,8 +1,8 @@
 import Link from "next/link";
-import UploadDropdown from "./nav/dropdown-menu";
+import UploadDropdown from "./dropdown-menu";
 
 const Footer = () => {
-  return <UploadDropdown />;
+	return <UploadDropdown />;
 };
 
 export default Footer;
