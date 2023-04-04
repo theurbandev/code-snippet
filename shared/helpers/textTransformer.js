@@ -1,68 +1,74 @@
-import { stringify } from "querystring";
 import themesData from "../data/themes";
 
-const mapper = (editorText) => {
-	// map highlight types to highlightMap
-	const highlightMap = new Map();
-	const highlightTypes = [
-		{ variable: ["const", "let"] },
-		{ variable2: ["var"] },
-		{ attribute: [] },
-		{ definition: [] },
-		{ keyword: ["console", "log"] },
-		{ operator: ["+", "-", "/", "*"] },
-		{ property: [] },
-		{ number: ["number", "int", "float"] },
-		{ string: ["string"] },
-		{ comment: ["//"] },
-		{ meta: ["."] },
-	];
+// map highlight types to highlightMap
+const highlightMap = new Map();
+const highlightTypes = [
+	{ variable: ["const", "let"] },
+	{ variable2: ["var"] },
+	{ attribute: [] },
+	{ definition: [] },
+	{ keyword: ["console", "log"] },
+	{ operator: ["+", "-", "/", "*"] },
+	{ property: [] },
+	{ number: ["number", "int", "float"] },
+	{ string: ["string"] },
+	{ comment: ["//"] },
+	{ meta: ["."] },
+];
 
-	highlightTypes.forEach((type) => {
-		for (const [key, value] of Object.entries(type)) {
-			highlightMap.set(key, value);
-		}
-	});
+highlightTypes.forEach((type) => {
+	for (const [key, value] of Object.entries(type)) {
+		highlightMap.set(key, value);
+	}
+});
 
-	// parse editorText and map to highlightMap
-	const parsedText = editorText.split(" ");
-	console.log(parsedText);
-	parsedText.forEach((word) => {
-		// if word equals a character, console.log the word
-		if (word.includes(highlightMap.get("meta"))) {
-			console.log("character :", word);
-		}
-		highlightMap.forEach((value, key) => {
-			if (value.includes(word)) {
-				console.log(`${key} :`, word);
-				const node = createDomNode(word, "variable");
-				const editorWordSwap = document
-					.getElementById("editor")
-					.innerHTML.replace(word, node);
+const createDomNode = (className, parsedText) => {
+	const node = `<span class="${className}">${parsedText}</span>`;
+	return node;
+};
 
-				document.getElementById("editor").innerHTML = editorWordSwap;
+const mapper = (parsedText) => {
+	parsedText.forEach((parsedText) => {
+		highlightMap.forEach((values, key) => {
+			if (values.includes(parsedText)) {
+				// Get all the text nodes in the editor element
+				let element = document.getElementById("innerEditor");
+				const newNode = element.outerHTML.replace(
+					parsedText,
+					createDomNode(key, parsedText)
+				);
+				element.outerHTML = newNode;
 			}
 		});
 	});
 };
 
-const createDomNode = (word, className) => {
-	const node = `<span class="${className}">${word}</span>`;
-	return node;
+const parseEditorText = (editorText) => {
+	let txtArr = new Array();
+	editorText.split("");
+	if (~editorText.indexOf(".")) {
+		//everything in the editor before the dot.
+		const slicedText = editorText.slice(0, editorText.indexOf("."));
+		//add the sliced text to the array along with the dot.
+		txtArr.push(slicedText);
+		txtArr.push(".");
+	}
+	mapper(txtArr);
 };
 
 const textTransformer = () => {
 	let themeHighlightData;
 	const currTheme = document.getElementById("Themes").value;
-	const currEditorText = document.getElementById("editor").innerHTML;
+	const currEditorText = document.getElementById("innerEditor").innerText;
 
 	for (let i = 0; i < themesData.length; i++) {
 		if (themesData[i].name == currTheme) {
 			themeHighlightData = themesData[i].highlights;
 		}
 	}
-
-	mapper(currEditorText);
+	if (currEditorText !== " ") {
+		parseEditorText(currEditorText);
+	}
 };
 
 export default textTransformer;

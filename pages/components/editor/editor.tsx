@@ -4,7 +4,8 @@ import textTransformer from "../../../shared/helpers/textTransformer.js";
 import { useEffect, useState } from "react";
 
 export const CodeEditor = () => {
-	const [editorText, setEditorText] = useState('console.log("Hello World")');
+	const [editorText] = useState("console.");
+	// const [editorText] = useState("");
 
 	useEffect(() => {
 		textTransformer();
@@ -21,7 +22,7 @@ export const CodeEditor = () => {
 					contentEditable='true'
 					onKeyUp={textTransformer}
 				>
-					{editorText}
+					<span id='innerEditor'>{editorText}</span>
 				</div>
 			</div>
 		</>
