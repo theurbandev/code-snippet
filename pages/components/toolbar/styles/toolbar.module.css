@@ -14,9 +14,7 @@
     font-weight: bold;
     border: solid 3px #0000005e;
     border-left: 0;
-}
-.dropdownSelect{
-    padding: 50px;
+    outline: none;
 }
 .sectionIcon{
     width: 50px;
@@ -38,4 +36,8 @@
     left: 0;
     right: 0;
     bottom: 20px;
+}
+
+.dropdown {
+    display: none !important;
 }

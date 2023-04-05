@@ -53,14 +53,14 @@ const createDomNode = (word, className) => {
 
 const textTransformer = () => {
 	let themeHighlightData;
-	const currTheme = document.getElementById("Themes").value;
 	const currEditorText = document.getElementById("editor").innerHTML;
+	// const currTheme = document.getElementById("Themes").value;
 
-	for (let i = 0; i < themesData.length; i++) {
-		if (themesData[i].name == currTheme) {
-			themeHighlightData = themesData[i].highlights;
-		}
-	}
+	// for (let i = 0; i < themesData.length; i++) {
+	// 	if (themesData[i].name == currTheme) {
+	// 		themeHighlightData = themesData[i].highlights;
+	// 	}
+	// }
 
 	mapper(currEditorText);
 };
