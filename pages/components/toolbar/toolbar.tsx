@@ -30,7 +30,7 @@ const Toolbar = () => {
 								return (
 									<option
 										className={`${styles.dropdownSelect}`}
-										id={val}
+										id='Themes'
 										key={i}
 									>
 										{val}
