@@ -4,7 +4,6 @@ import themeData from "../../../shared/data/themes.js";
 const Toolbar = () => {
 	let themes = [];
 	for (let i = 0; i < themeData.length; i++) {
-		console.log(themeData[i].id);
 		themes.push(themeData[i].id);
 	}
 
