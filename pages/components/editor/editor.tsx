@@ -13,16 +13,19 @@ export const CodeEditor = () => {
 
 	return (
 		<>
+			{/* TODO: make the whole editor section editable, such that the user can click
+			anywhere in the editor and start typing */}
 			<div className={styles.codeContainer}>
 				{editorTopBar()}
 				<div
 					id='editor'
 					className={styles.codeEditor}
 					style={{ fontSize: "15px" }}
-					contentEditable='true'
 					onKeyUp={textTransformer}
 				>
-					<span id='innerEditor'>{editorText}</span>
+					<div id='innerEditor' contentEditable='true'>
+						{editorText}
+					</div>
 				</div>
 			</div>
 		</>

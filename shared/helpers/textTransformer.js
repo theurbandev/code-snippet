@@ -43,7 +43,7 @@ const mapper = (parsedText) => {
 	});
 };
 
-const parseEditorText = (editorText) => {
+const parser = (editorText) => {
 	let txtArr = new Array();
 	editorText.split("");
 	if (~editorText.indexOf(".")) {
@@ -66,8 +66,12 @@ const textTransformer = () => {
 			themeHighlightData = themesData[i].highlights;
 		}
 	}
-	if (currEditorText !== " ") {
-		parseEditorText(currEditorText);
+
+	// no need to run parser if there is no text in the editor
+	if (currEditorText !== "") {
+		parser(currEditorText);
+	} else {
+		console.log("No text in editor");
 	}
 };
 
