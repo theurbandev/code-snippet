@@ -1,44 +1,45 @@
 import styles from "./styles/toolbar.module.css";
-
-const toolbarData = require("./toolbarData.json");
-
-const randomColor = () => {
-	const randomNumber: number = Math.floor(Math.random() * toolbarData.tailwindColors.length);
-	return toolbarData.tailwindColors[randomNumber];
-};
+import themeData from "../../../shared/data/themes.js";
 
 const Toolbar = () => {
-	let entries: [string, string[]][] = Object.entries(toolbarData.toggleOptions);
+	let themes = [];
+	for (let i = 0; i < themeData.length; i++) {
+		console.log(themeData[i].id);
+		themes.push(themeData[i].id);
+	}
+
 	return (
-		<section className='flex justify-center flex-wrap flex-row py-14 px-8' style={{ justifyContent: "left" }}>
+		<section
+			className='flex justify-center flex-wrap flex-row py-14 px-8'
+			style={{ justifyContent: "left" }}
+		>
 			<div className={`flex space-x-10`}>
-				{entries.map(([key, val]) => {
-					return (
-						<div id='toggleContainer' className={`flex flex-col space-x-10`} key={key}>
-							<h3
-								id='toggleName'
-								className={`text-4xl font-semibold text-left mb-3 ${styles.numLinesToggle}`}
-								key={key}
-							>
-								{key}
-							</h3>
-							<div className={`flex`} style={{ marginLeft: "4px" }}>
-								<div className={`${styles.sectionIcon}`}></div>
-								<select
-									className={`${styles.dropdownOption} border-solid border-2 border-black transition ease-in-out delay-150 hover:translate-x-5 hover:scale-80 hover:bg-gray-500 hover:cursor-pointer hover:shadow-lg duration-300 hover:color-white`}
-								>
-									{val.map((element) => {
-										return (
-											<option className={`${styles.dropdownSelect}`} id={key} key={element}>
-												{element}
-											</option>
-										);
-									})}
-								</select>
-							</div>
-						</div>
-					);
-				})}
+				<div id='toggleContainer' className={`flex flex-col space-x-10`}>
+					<h3
+						id='toggleName'
+						className={`text-4xl font-semibold text-left mb-3 ${styles.numLinesToggle}`}
+					>
+						Themes
+					</h3>
+					<div className={`flex`} style={{ marginLeft: "4px" }}>
+						<div className={`${styles.sectionIcon}`}></div>
+						<select
+							className={`${styles.dropdownOption} border-solid border-2 border-black transition ease-in-out delay-150 hover:translate-x-5 hover:scale-80 hover:bg-gray-500 hover:cursor-pointer hover:shadow-lg duration-300 hover:color-white`}
+						>
+							{themes.map((val, i) => {
+								return (
+									<option
+										className={`${styles.dropdownSelect}`}
+										id='Themes'
+										key={i}
+									>
+										{val}
+									</option>
+								);
+							})}
+						</select>
+					</div>
+				</div>
 				{/* <div>
 					<h3 id='toggleName' className={`text-4xl font-semibold text-left mb-3 ${styles.numLinesToggle}`}>
 						Numbered Lines
@@ -51,7 +52,7 @@ const Toolbar = () => {
 						></div>
 					</label>
 				</div> */}
-               {/* "Font Size": [15],
+				{/* "Font Size": [15],
 		"Background": ["dim1", "whiteyellow", "gradient2", "none"],
 		"Language": ["JavaScript", "Go", "PHP"] */}
 			</div>
