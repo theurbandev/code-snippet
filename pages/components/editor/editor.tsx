@@ -4,7 +4,8 @@ import textTransformer from "../../../shared/helpers/textTransformer.js";
 import { useEffect, useState } from "react";
 
 export const CodeEditor = () => {
-	const [editorText, setEditorText] = useState('console.log("Hello World")');
+	const [editorText] = useState("console.");
+	// const [editorText] = useState("");
 
 	useEffect(() => {
 		textTransformer();
@@ -12,16 +13,19 @@ export const CodeEditor = () => {
 
 	return (
 		<>
+			{/* TODO: make the whole editor section editable, such that the user can click
+			anywhere in the editor and start typing */}
 			<div className={styles.codeContainer}>
 				{editorTopBar()}
 				<div
 					id='editor'
 					className={styles.codeEditor}
 					style={{ fontSize: "15px" }}
-					contentEditable='true'
 					onKeyUp={textTransformer}
 				>
-					{editorText}
+					<div id='innerEditor' contentEditable='true'>
+						{editorText}
+					</div>
 				</div>
 			</div>
 		</>
