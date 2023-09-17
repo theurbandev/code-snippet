@@ -22,7 +22,7 @@ highlightTypes.forEach((type) => {
 	}
 });
 
-const createDomNode = (className, parsedText) => {
+const createDomNode = (className, parsedText, highlight) => {
 	const node = `<span class="${className}">${parsedText}</span>`;
 	return node;
 };

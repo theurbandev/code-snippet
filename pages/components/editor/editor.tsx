@@ -8,7 +8,7 @@ export const CodeEditor = () => {
 	// const [editorText] = useState("");
 
 	useEffect(() => {
-		textTransformer();
+		// textTransformer();
 	}, []);
 
 	return (
@@ -18,14 +18,14 @@ export const CodeEditor = () => {
 			<div className={styles.codeContainer}>
 				{editorTopBar()}
 				<div
-					id='editor'
+					id="editor"
 					className={styles.codeEditor}
 					style={{ fontSize: "15px" }}
 					onKeyUp={textTransformer}
 				>
-					<div id='innerEditor' contentEditable='true'>
+					{/* <div id='innerEditor' contentEditable='true'>
 						{editorText}
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</>
