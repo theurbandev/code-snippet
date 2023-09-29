@@ -1,31 +1,30 @@
 import styles from "./styles/editor.module.css";
 import editorTopBar from "../editor-top-bar/editor-top-bar";
-import textTransformer from "../../../shared/helpers/textTransformer.js";
+import AceEditor from "react-ace";
 import { useEffect, useState } from "react";
 
 export const CodeEditor = () => {
-	const [editorText] = useState("console.");
+	const [editorText] = useState("console.log('hello world'");
 	// const [editorText] = useState("");
 
-	useEffect(() => {
-		// textTransformer();
-	}, []);
+	useEffect(() => {}, []);
 
 	return (
 		<>
-			{/* TODO: make the whole editor section editable, such that the user can click
-			anywhere in the editor and start typing */}
 			<div className={styles.codeContainer}>
-				{editorTopBar()}
-				<div
-					id="editor"
-					className={styles.codeEditor}
-					style={{ fontSize: "15px" }}
-					onKeyUp={textTransformer}
-				>
-					{/* <div id='innerEditor' contentEditable='true'>
-						{editorText}
-					</div> */}
+				<span className={styles.editorTopBar}>{editorTopBar()}</span>
+				<div className={styles.editor}>
+					<AceEditor
+						setOptions={{
+							wrap: true,
+							showLineNumbers: true,
+							fixedWidthGutter: true,
+							showPrintMargin: false,
+							highlightGutterLine: false,
+							displayIndentGuides: false,
+						}}
+						style={{ height: "100%", width: "100%" }}
+					/>
 				</div>
 			</div>
 		</>

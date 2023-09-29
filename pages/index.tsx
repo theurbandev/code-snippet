@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 		<>
 			<div className={`${styles.container} flex flex-col`}>
 				<div className={`basis-2/12 ${styles.toolbarContainer}`}>
-					<ToolBar />
+					{/* <ToolBar /> */}
 				</div>
 				<div className={`basis-10/12 ${styles.uploadCanvas}`}>
 					<CodeEditor />

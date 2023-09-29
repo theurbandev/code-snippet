@@ -5,15 +5,16 @@ import Link from "next/link";
 
 export default function UploadDropdown() {
 	return (
-		<div className=''>
-			<Menu as='div' className='relative inline-block text-right'>
+		<div className="">
+			<Menu as="div" className="relative inline-block text-right">
 				<div>
 					<Menu.Button
-						className='inline-flex w-72 h-[60px] justify-center  rounded-md bg-black bg-opacity-20 px-5 py-5 text-2xl text-white font-bold hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+						className="inline-flex w-72 h-[60px] justify-center rounded-md bg-opacity-20 px-5 py-5 text-2xl text-white font-bold hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
 						style={{
 							fontFamily: "sans-serif",
 							letterSpacing: "3px",
 							borderBottom: "solid 5px #3c6545db",
+							backgroundColor: "#202020",
 						}}
 					>
 						EXPORT
@@ -21,15 +22,15 @@ export default function UploadDropdown() {
 				</div>
 				<Transition
 					as={Fragment}
-					enter='transition ease-out duration-100'
-					enterFrom='transform opacity-0 scale-95'
-					enterTo='transform opacity-100 scale-100'
-					leave='transition ease-in duration-75'
-					leaveFrom='transform opacity-100 scale-100'
-					leaveTo='transform opacity-0 scale-95'
+					enter="transition ease-out duration-100"
+					enterFrom="transform opacity-0 scale-95"
+					enterTo="transform opacity-100 scale-100"
+					leave="transition ease-in duration-75"
+					leaveFrom="transform opacity-100 scale-100"
+					leaveTo="transform opacity-0 scale-95"
 				>
-					<Menu.Items className='absolute left-0 right-0 -top-40 mt-2 w-45 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
-						<div className='px-1 py-1 '>
+					<Menu.Items className="absolute left-0 right-0 -top-40 mt-2 w-45 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+						<div className="px-1 py-1 ">
 							<Menu.Item>
 								{({ active }) => (
 									<button
@@ -41,18 +42,18 @@ export default function UploadDropdown() {
 									>
 										{active ? (
 											<EditActiveIcon
-												className='mr-2 h-5 w-5'
-												aria-hidden='true'
+												className="mr-2 h-5 w-5"
+												aria-hidden="true"
 											/>
 										) : (
-											<EditInactiveIcon className='mr-2 h-5 w-5' />
+											<EditInactiveIcon className="mr-2 h-5 w-5" />
 										)}
 										Share
 									</button>
 								)}
 							</Menu.Item>
 						</div>
-						<div className='px-1 py-1'>
+						<div className="px-1 py-1">
 							<Menu.Item>
 								{({ active }) => (
 									<button
@@ -64,13 +65,13 @@ export default function UploadDropdown() {
 									>
 										{active ? (
 											<ArchiveActiveIcon
-												className='mr-2 h-5 w-5'
-												aria-hidden='true'
+												className="mr-2 h-5 w-5"
+												aria-hidden="true"
 											/>
 										) : (
 											<ArchiveInactiveIcon
-												className='mr-2 h-5 w-5'
-												aria-hidden='true'
+												className="mr-2 h-5 w-5"
+												aria-hidden="true"
 											/>
 										)}
 										Export
@@ -78,7 +79,7 @@ export default function UploadDropdown() {
 								)}
 							</Menu.Item>
 						</div>
-						<div className='px-1 py-1'>
+						<div className="px-1 py-1">
 							<Menu.Item>
 								{({ active }) => (
 									<button
@@ -90,13 +91,13 @@ export default function UploadDropdown() {
 									>
 										{active ? (
 											<DeleteActiveIcon
-												className='mr-2 h-5 w-5 text-black-400'
-												aria-hidden='true'
+												className="mr-2 h-5 w-5 text-black-400"
+												aria-hidden="true"
 											/>
 										) : (
 											<DeleteInactiveIcon
-												className='mr-2 h-5 w-5 text-black-400'
-												aria-hidden='true'
+												className="mr-2 h-5 w-5 text-black-400"
+												aria-hidden="true"
 											/>
 										)}
 										Delete
@@ -116,7 +117,7 @@ export default function UploadDropdown() {
 				}}
 			>
 				<h6>
-					<Link href='https://github.com/theurbandev' target={"_blank"}>
+					<Link href="https://github.com/theurbandev" target={"_blank"}>
 						@theurbandev
 					</Link>
 				</h6>
