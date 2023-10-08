@@ -9,8 +9,8 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<div className={`${styles.container} flex flex-col`}>
-				<div className={`basis-2/12 ${styles.toolbarContainer}`}>
-					{/* <ToolBar /> */}
+				<div className="basis-2/12">
+					<ToolBar />
 				</div>
 				<div className={`basis-10/12 ${styles.uploadCanvas}`}>
 					<CodeEditor />
