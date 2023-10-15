@@ -17,20 +17,26 @@ const Toolbar = () => {
 	}
 
 	return (
-		<div className={`flex flex-row ${styles.toolbarContainer}`}>
+		<div className={`flex flex-row space-x-3 ${styles.toolbarContainer}`}>
 			<div className="basis-1/4 md:basis-1/3">
 				<Menu
 					as="div"
 					className="relative inline-block text-left"
 					style={{ width: "100%", height: "100%" }}
 				>
-					<Menu.Button className="flex w-full h-full items-center justify-center gap-x-1.5 px-3 py-2 text-2xl font-semibold text-white-100 shadow-sm hover:bg-gray-900">
-						Languages
-						<ChevronDownIcon
-							className="-mr-1 h-5 w-5 text-gray-400"
-							aria-hidden="true"
-						/>
-					</Menu.Button>
+					<div className="flex flex-row space-x-3">
+						<Menu.Button
+							className="flex justify-between w-full h-full gap-x-1.5 px-3 py-2 text-1xl text-white-100"
+							style={{ border: "2.5px solid rgb(164 164 164)" }}
+						>
+							Languages
+							<ChevronDownIcon
+								className="-mr-1 h-5 w-5 text-gray-400"
+								aria-hidden="true"
+								style={{ marginTop: "0.2rem" }}
+							/>
+						</Menu.Button>
+					</div>
 
 					<Transition
 						as={Fragment}
@@ -41,7 +47,7 @@ const Toolbar = () => {
 						leaveFrom="transform opacity-100 scale-100"
 						leaveTo="transform opacity-0 scale-95"
 					>
-						<Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+						<Menu.Items className="absolute mt-2 w-max origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 							<div className="py-1">
 								<Menu.Item>
 									{({ active }) => (
@@ -116,13 +122,19 @@ const Toolbar = () => {
 					className="relative inline-block text-left"
 					style={{ width: "100%", height: "100%" }}
 				>
-					<Menu.Button className="flex w-full h-full items-center justify-center gap-x-1.5 px-3 py-2 text-2xl font-semibold text-white-100 shadow-sm hover:bg-gray-900">
-						Themes
-						<ChevronDownIcon
-							className="-mr-1 h-5 w-5 text-gray-400"
-							aria-hidden="true"
-						/>
-					</Menu.Button>
+					<div className="flex flex-row space-x-3">
+						<Menu.Button
+							className="flex w-full h-full gap-x-1.5 px-3 py-2 text-1xl text-white-100 justify-between"
+							style={{ border: "2.5px solid rgb(164 164 164)" }}
+						>
+							Themes
+							<ChevronDownIcon
+								className="-mr-1 h-5 w-5 text-gray-400"
+								aria-hidden="true"
+								style={{ marginTop: "0.2rem" }}
+							/>
+						</Menu.Button>
+					</div>
 
 					<Transition
 						as={Fragment}
@@ -208,13 +220,19 @@ const Toolbar = () => {
 					className="relative inline-block text-left"
 					style={{ width: "100%", height: "100%" }}
 				>
-					<Menu.Button className="flex w-full h-full items-center justify-center gap-x-1.5 px-3 py-2 text-2xl font-semibold text-white-100 shadow-sm hover:bg-gray-900">
-						Options
-						<ChevronDownIcon
-							className="-mr-1 h-5 w-5 text-gray-400"
-							aria-hidden="true"
-						/>
-					</Menu.Button>
+					<div className="flex flex-row space-x-3">
+						<Menu.Button
+							className="flex w-full h-full gap-x-1.5 px-3 py-2 text-1xl text-white-100 justify-between"
+							style={{ border: "2.5px solid rgb(164 164 164)" }}
+						>
+							Options
+							<ChevronDownIcon
+								className="-mr-1 h-5 w-5 text-gray-400"
+								aria-hidden="true"
+								style={{ marginTop: "0.2rem" }}
+							/>
+						</Menu.Button>
+					</div>
 
 					<Transition
 						as={Fragment}
