@@ -1,16 +1,18 @@
+import { useState } from "react";
 import styles from "./styles/editor.module.css";
 import editorTopBar from "../editor-top-bar/editor-top-bar";
 import AceEditor from "react-ace";
-
-import "ace-builds/src-noconflict/mode-java";
-import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/ext-language_tools";
-import { useState } from "react";
+import "../../../shared/ace-modes";
+import "../../../shared/ace-themes";
 
-export const CodeEditor = () => {
-	const [editorText] = useState("console.log('hello world');");
+interface props {
+	language: string;
+	theme: string;
+}
 
-	const onChange = () => console.log("editor changed");
+export const CodeEditor = ({ language, theme }: props) => {
+	const [editorText, updateEditorText] = useState("console.log('hello world');");
 
 	return (
 		<>
@@ -18,14 +20,14 @@ export const CodeEditor = () => {
 				<span className={styles.editorTopBar}>{editorTopBar()}</span>
 				<div className={styles.editor}>
 					<AceEditor
-						mode="java"
-						theme="github"
+						mode={language == "Language" ? "javascript" : language.toLowerCase()}
+						theme={theme == "Default" ? "github" : theme.toLowerCase()}
 						value={editorText}
 						wrapEnabled={true}
 						showPrintMargin={false}
 						highlightActiveLine={false}
 						style={{ height: "100%", width: "100%" }}
-						onChange={onChange}
+						onChange={updateEditorText}
 					/>
 				</div>
 			</div>

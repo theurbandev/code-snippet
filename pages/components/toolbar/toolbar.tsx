@@ -1,17 +1,20 @@
 import styles from "./styles/toolbar.module.css";
 import themeData from "../../../shared/data/themes.js";
-
-
-import { Fragment } from "react";
+import langs from "../../../shared/data/langagues.js";
+import { Fragment, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import languages from "../../../shared/data/langagues.js";
 
-const Toolbar = () => {
-	let themes = [];
-	for (let i = 0; i < themeData.length; i++) {
-		themes.push(themeData[i].id);
-	}
+interface props {
+	language: string;
+	theme?: string;
+	options?: Array<string>;
+	updateLanguage: Function;
+	updateTheme: Function;
+}
 
+const Toolbar = ({ language, theme, options, updateLanguage }: props) => {
 	function classNames(...classes: any) {
 		return classes.filter(Boolean).join(" ");
 	}
@@ -26,10 +29,10 @@ const Toolbar = () => {
 				>
 					<div className="flex flex-row space-x-3">
 						<Menu.Button
-							className="flex justify-between w-full h-full gap-x-1.5 px-3 py-2 text-1xl text-white-100"
-							style={{ border: "2.5px solid rgb(164 164 164)" }}
+							className="flex justify-between w-full h-full gap-x-1.5 px-6 py-2 text-1xl text-white-100"
+							style={{ backgroundColor: "#5a5a5ab8", borderRadius: "11px" }}
 						>
-							Languages
+							{language}
 							<ChevronDownIcon
 								className="-mr-1 h-5 w-5 text-gray-400"
 								aria-hidden="true"
@@ -47,70 +50,26 @@ const Toolbar = () => {
 						leaveFrom="transform opacity-100 scale-100"
 						leaveTo="transform opacity-0 scale-95"
 					>
-						<Menu.Items className="absolute mt-2 w-max origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+						<Menu.Items className="absolute mt-2 w-full h-40 overflow-scroll z-50 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 							<div className="py-1">
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											Account settings
-										</a>
-									)}
-								</Menu.Item>
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											Support
-										</a>
-									)}
-								</Menu.Item>
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											License
-										</a>
-									)}
-								</Menu.Item>
-								<form method="POST" action="#">
-									<Menu.Item>
+								{langs.map((element, i) => (
+									<Menu.Item key={i}>
 										{({ active }) => (
-											<button
-												type="submit"
+											<p
+												onClick={() => updateLanguage(element)}
+												key={i}
 												className={classNames(
 													active
 														? "bg-gray-100 text-gray-900"
 														: "text-gray-700",
-													"block w-full px-4 py-2 text-left text-sm"
+													"block px-4 py-2 text-sm"
 												)}
 											>
-												Sign out
-											</button>
+												{element}
+											</p>
 										)}
 									</Menu.Item>
-								</form>
+								))}
 							</div>
 						</Menu.Items>
 					</Transition>
@@ -124,10 +83,10 @@ const Toolbar = () => {
 				>
 					<div className="flex flex-row space-x-3">
 						<Menu.Button
-							className="flex w-full h-full gap-x-1.5 px-3 py-2 text-1xl text-white-100 justify-between"
-							style={{ border: "2.5px solid rgb(164 164 164)" }}
+							className="flex w-full h-full gap-x-1.5 px-6 py-2 text-1xl text-white-100 justify-between"
+							style={{ backgroundColor: "#5a5a5ab8", borderRadius: "11px" }}
 						>
-							Themes
+							{theme}
 							<ChevronDownIcon
 								className="-mr-1 h-5 w-5 text-gray-400"
 								aria-hidden="true"
@@ -145,7 +104,7 @@ const Toolbar = () => {
 						leaveFrom="transform opacity-100 scale-100"
 						leaveTo="transform opacity-0 scale-95"
 					>
-						<Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+						<Menu.Items className="absolute mt-2 w-full h-40 overflow-scroll z-50 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 							<div className="py-1">
 								<Menu.Item>
 									{({ active }) => (
@@ -222,8 +181,8 @@ const Toolbar = () => {
 				>
 					<div className="flex flex-row space-x-3">
 						<Menu.Button
-							className="flex w-full h-full gap-x-1.5 px-3 py-2 text-1xl text-white-100 justify-between"
-							style={{ border: "2.5px solid rgb(164 164 164)" }}
+							className="flex w-full h-full gap-x-1.5 px-6 py-2 text-1xl text-white-100 justify-between"
+							style={{ backgroundColor: "#5a5a5ab8", borderRadius: "11px" }}
 						>
 							Options
 							<ChevronDownIcon
@@ -243,7 +202,7 @@ const Toolbar = () => {
 						leaveFrom="transform opacity-100 scale-100"
 						leaveTo="transform opacity-0 scale-95"
 					>
-						<Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+						<Menu.Items className="absolute mt-2 w-full z-50 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 							<div className="py-1">
 								<Menu.Item>
 									{({ active }) => (

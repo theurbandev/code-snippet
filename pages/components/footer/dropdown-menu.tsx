@@ -13,7 +13,7 @@ export default function UploadDropdown() {
 						style={{
 							letterSpacing: "3px",
 							borderBottom: "solid 5px #3c6545db",
-							backgroundColor: "#202020",
+							backgroundColor: "#181a1b",
 							fontWeight: "bold",
 						}}
 					>
@@ -110,7 +110,7 @@ export default function UploadDropdown() {
 			</Menu>
 			<div
 				style={{
-					color: "black",
+					color: "white",
 					fontSize: "11px",
 					marginTop: "25px",
 					letterSpacing: "1px",
