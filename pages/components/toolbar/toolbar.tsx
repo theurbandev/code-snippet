@@ -1,10 +1,9 @@
 import styles from "./styles/toolbar.module.css";
-import themeData from "../../../shared/data/themes.js";
+import themes from "../../../shared/data/themes.js";
 import langs from "../../../shared/data/langagues.js";
 import { Fragment, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import languages from "../../../shared/data/langagues.js";
 
 interface props {
 	language: string;
@@ -14,7 +13,7 @@ interface props {
 	updateTheme: Function;
 }
 
-const Toolbar = ({ language, theme, options, updateLanguage }: props) => {
+const Toolbar = ({ language, theme, options, updateLanguage, updateTheme }: props) => {
 	function classNames(...classes: any) {
 		return classes.filter(Boolean).join(" ");
 	}
@@ -106,68 +105,24 @@ const Toolbar = ({ language, theme, options, updateLanguage }: props) => {
 					>
 						<Menu.Items className="absolute mt-2 w-full h-40 overflow-scroll z-50 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
 							<div className="py-1">
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											Account settings
-										</a>
-									)}
-								</Menu.Item>
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											Support
-										</a>
-									)}
-								</Menu.Item>
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											License
-										</a>
-									)}
-								</Menu.Item>
-								<form method="POST" action="#">
-									<Menu.Item>
+								{themes.map((element, i) => (
+									<Menu.Item key={i}>
 										{({ active }) => (
-											<button
-												type="submit"
+											<p
+												key={i}
+												onClick={() => updateTheme(element)}
 												className={classNames(
 													active
 														? "bg-gray-100 text-gray-900"
 														: "text-gray-700",
-													"block w-full px-4 py-2 text-left text-sm"
+													"block px-4 py-2 text-sm"
 												)}
 											>
-												Sign out
-											</button>
+												{element}
+											</p>
 										)}
 									</Menu.Item>
-								</form>
+								))}
 							</div>
 						</Menu.Items>
 					</Transition>
@@ -219,53 +174,6 @@ const Toolbar = ({ language, theme, options, updateLanguage }: props) => {
 										</a>
 									)}
 								</Menu.Item>
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											Support
-										</a>
-									)}
-								</Menu.Item>
-								<Menu.Item>
-									{({ active }) => (
-										<a
-											href="#"
-											className={classNames(
-												active
-													? "bg-gray-100 text-gray-900"
-													: "text-gray-700",
-												"block px-4 py-2 text-sm"
-											)}
-										>
-											License
-										</a>
-									)}
-								</Menu.Item>
-								<form method="POST" action="#">
-									<Menu.Item>
-										{({ active }) => (
-											<button
-												type="submit"
-												className={classNames(
-													active
-														? "bg-gray-100 text-gray-900"
-														: "text-gray-700",
-													"block w-full px-4 py-2 text-left text-sm"
-												)}
-											>
-												Sign out
-											</button>
-										)}
-									</Menu.Item>
-								</form>
 							</div>
 						</Menu.Items>
 					</Transition>

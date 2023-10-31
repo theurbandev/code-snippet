@@ -3,8 +3,8 @@ import styles from "./styles/editor.module.css";
 import editorTopBar from "../editor-top-bar/editor-top-bar";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/ext-language_tools";
-import "../../../shared/ace-modes";
-import "../../../shared/ace-themes";
+import "../../../shared/data/ace-modes";
+import "../../../shared/data/ace-themes";
 
 interface props {
 	language: string;
