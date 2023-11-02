@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<div className={`${styles.container} flex flex-col`}>
-				<h1 style={{ padding: "10px", fontSize: "1.4rem" }}>Code Snippit</h1>
+				<h1 style={{ padding: "25px 0 0 0", fontSize: "1.6rem" }}>Code Snippet</h1>
 				<div className="basis-2/12">
 					<ToolBar
 						language={selectedLanguage}

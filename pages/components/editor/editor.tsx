@@ -6,12 +6,13 @@ import "ace-builds/src-noconflict/ext-language_tools";
 import "../../../shared/data/ace-modes";
 import "../../../shared/data/ace-themes";
 
-interface props {
+interface EditorProps {
 	language: string;
 	theme: string;
 }
 
-export const CodeEditor = ({ language, theme }: props) => {
+export const CodeEditor = (props: EditorProps) => {
+	const { language = "Language", theme = "Theme" } = props;
 	const [editorText, updateEditorText] = useState("console.log('hello world');");
 
 	return (
@@ -20,8 +21,8 @@ export const CodeEditor = ({ language, theme }: props) => {
 				<span className={styles.editorTopBar}>{editorTopBar()}</span>
 				<div className={styles.editor}>
 					<AceEditor
-						mode={language == "Language" ? "javascript" : language.toLowerCase()}
-						theme={theme == "Default" ? "github" : theme.toLowerCase()}
+						mode={language === "Language" ? "javascript" : language.toLowerCase()}
+						theme={theme === "Theme" ? "github" : theme.toLowerCase()}
 						value={editorText}
 						wrapEnabled={true}
 						showPrintMargin={false}

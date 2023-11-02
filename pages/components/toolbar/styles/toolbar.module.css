@@ -1,10 +1,10 @@
 .toolbarContainer{
     background-color: #20202000;
     height: 55px;
-    /* border-bottom: 5px solid rgba(60, 101, 69, 0.86); */
+        /* border-bottom: 5px solid rgba(60, 101, 69, 0.86); */
     margin: 0 auto;
     max-width: 850px;   
-    margin-top: 30px;
+    margin-top: 25px;
 }
 .dropdownOption{
     color: white;
