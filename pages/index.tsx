@@ -12,7 +12,13 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<div className={`${styles.container} flex flex-col`}>
-				<h1 style={{ padding: "25px 0 0 0", fontSize: "1.6rem" }}>Code Snippet</h1>
+				<h1 style={{ padding: "25px 0 0 0", fontSize: "3.6rem", fontWeight: "900" }}>
+					Code Snippet
+				</h1>
+				<p style={{ color: "white", fontSize: "1rem" }}>
+					Generate and distribute visually appealing images featuring your source
+					code. <br />
+				</p>
 				<div className="basis-2/12">
 					<ToolBar
 						language={selectedLanguage}
