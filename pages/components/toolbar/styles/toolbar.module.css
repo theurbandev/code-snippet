@@ -1,40 +1,40 @@
-.toolbarContainer{
-    background-color: #20202000;
-    height: 55px;
-    margin: 50px auto 25px auto;
-    max-width: 850px;   
+.toolbarContainer {
+	background-color: #20202000;
+	height: 55px;
+	margin: 50px auto 25px auto;
+	max-width: 850px;
 }
-.dropdownOption{
-    color: white;
-    background-color: transparent;
-    height: 3.4rem;
-    padding: 0rem 1.5rem;
-    text-align: center;
-    font-size: 2rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    border: solid 3px #0000005e;
-    border-left: 0;
-    outline: none;
+.dropdownOption {
+	color: white;
+	background-color: transparent;
+	height: 3.4rem;
+	padding: 0rem 1.5rem;
+	text-align: center;
+	font-size: 2rem;
+	font-family: sans-serif;
+	font-weight: bold;
+	border: solid 3px #0000005e;
+	border-left: 0;
+	outline: none;
 }
-.sectionIcon{
-    width: 50px;
-    height: 52px;
-    background-color: hsl(204deg 20% 23% / 51%);
-    line-height: 42px;
-    box-shadow: 0px 20px 0px 0px #3c6545db;
+.sectionIcon {
+	width: 50px;
+	height: 52px;
+	background-color: hsl(204deg 20% 23% / 51%);
+	line-height: 42px;
+	box-shadow: 0px 20px 0px 0px #3c6545db;
 }
-.numLinesToggle{
-    color: hsl(0deg 1% 28% / 78%);
-    font-weight: 600;
-    font-size: 6.25rem;
-    font-family: sans-serif;
-    letter-spacing: 8px;
-    line-height: 5rem;
+.numLinesToggle {
+	color: hsl(0deg 1% 28% / 78%);
+	font-weight: 600;
+	font-size: 6.25rem;
+	font-family: sans-serif;
+	letter-spacing: 8px;
+	line-height: 5rem;
 }
-.footer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20px;
+.footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
 }
