@@ -3,11 +3,14 @@ import { useState } from "react";
 import ToolBar from "./components/toolbar/toolbar";
 import CodeEditor from "./components/editor/editor";
 import styles from "./components/toolbar/styles/toolbar.module.css";
-import Footer from "./components/footer/footer";
+import Link from "next/link";
 
 const Home: NextPage = () => {
 	let [selectedLanguage, setSelectedLanguage] = useState("Language");
 	let [selectedTheme, setSelectedTheme] = useState("Theme");
+	let [selectedTabSize, setTabSize] = useState(2);
+	let [showGutter, setGutterBool] = useState(true);
+	let [fontSize, setFontSize] = useState(12);
 
 	return (
 		<>
@@ -23,16 +26,41 @@ const Home: NextPage = () => {
 					<ToolBar
 						language={selectedLanguage}
 						theme={selectedTheme}
+						tabSize={selectedTabSize}
+						showGutter={showGutter}
+						fontSize={fontSize}
 						updateLanguage={(lang: string) => setSelectedLanguage(lang)}
 						updateTheme={(theme: string) => setSelectedTheme(theme)}
+						updateEditorTabSize={(tabSize: number) => setTabSize(tabSize)}
+						updateGutterValue={(showGutter: boolean) => setGutterBool(showGutter)}
+						updateFontSize={(fontSize: number) => setFontSize(fontSize)}
 					/>
 				</div>
 				<div className={`basis-10/12 ${styles.uploadCanvas}`}>
-					<CodeEditor language={selectedLanguage} theme={selectedTheme} />
+					<CodeEditor
+						language={selectedLanguage}
+						theme={selectedTheme}
+						tabSize={selectedTabSize}
+						showGutter={showGutter}
+						fontSize={fontSize}
+					/>
 				</div>
 			</div>
 			<div className={`${styles.footer}`}>
-				<Footer />
+				<div
+					style={{
+						color: "white",
+						fontSize: "11px",
+						marginTop: "25px",
+						letterSpacing: "1px",
+					}}
+				>
+					<h6>
+						<Link href="https://github.com/theurbandev" target={"_blank"}>
+							@theurbandev
+						</Link>
+					</h6>
+				</div>{" "}
 			</div>
 		</>
 	);
