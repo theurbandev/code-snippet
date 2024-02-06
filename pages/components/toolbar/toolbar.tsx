@@ -6,6 +6,7 @@ import { Menu, Transition, Popover } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@material-tailwind/react";
 
+
 interface Props {
   language: string;
   theme: string;
@@ -305,22 +306,18 @@ const Toolbar = ({
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items className="absolute mt-2 w-full z-50 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-              <div className="py-1">
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        active
-                          ? "bg-gray-100 text-gray-900"
-                          : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Account settings
-                    </a>
-                  )}
-                </Menu.Item>
+              <div className="py-1 px-1">
+                <div className="flex flex-row gap-1">
+                  <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l basis-1/3">
+                    PNG
+                  </button>
+                  <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r basis-1/3">
+                    JPG
+                  </button>
+                  <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r basis-1/3">
+                    SVG
+                  </button>
+                </div>
               </div>
             </Menu.Items>
           </Transition>
